@@ -1,2 +1,0 @@
-# development
-ObjectivePixel Web Development.
