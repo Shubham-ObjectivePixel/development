@@ -1,28 +1,29 @@
+Basic Info:
 Domain name: objectivepixel.in
+Domain is on Godaddy
 Hosting: Hostinger
 Term: 1 year
 Email: shubham@objectivepixel.in
-Logo: needs to find
+Logo: Final
 Website Idea: need to find
 Content: need to build
 
-
-u214183598_objectivepixel
-u214183598_shubham
-Y$j>kKSx21
 
 Price:
 683.22+2408.62=3,091.84 
 
 
-Site:
-Single page site
+Site Idea:
 
-Navigation should be like this one: https://wearesmall.es/en
-Background also can be follow this one https://wearesmall.es/en
+Like the Header and Navigation of: https://wearesmall.es/en
+The background effect is good for this https://wearesmall.es/en
 
-How cursor pointer follow the back shadow: https://www.vertica.dk/
+There will we a cursor pointer effect same as: https://www.vertica.dk/
 
-Contents: https://veronicazubakova.com/
+Can be follow idea of content from the following websites:
+https://veronicazubakova.com/
+https://rootwebdesign.studio/
 
-Inspire
+
+Other links:
+https://chatgpt.com/share/68abd941-3208-8011-a81e-12e7de07e268
