@@ -1,7 +1,7 @@
 const BannerSection = () => {
     return (
         <>
-            <section className="bg-blue-500">
+            <section className={cn('bg-clue-500')}>
                 Banner Section
             </section>
         </>
