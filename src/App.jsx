@@ -1,7 +1,7 @@
-import Header from './templates/header/Header'
-import Footer from './templates/footer/Footer'
-import BannerSection from './templates/main/BannerSection'
-import AboutSection from './templates/main/AboutSection'
+import Header from './Templates/Header/Header'
+import Footer from './Templates/Footer/Footer'
+import BannerSection from './Templates/Main/Home/BannerSection'
+import AboutSection from './Templates/Main/Home/AboutSection'
 
 const App = () => {
     return (
