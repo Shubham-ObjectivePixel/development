@@ -27,3 +27,8 @@ https://rootwebdesign.studio/
 
 Other links:
 https://chatgpt.com/share/68abd941-3208-8011-a81e-12e7de07e268
+
+Mouse Effect:
+https://codepen.io/AdrainWolfe/pen/YzybpzB
+
+https://cursify.vercel.app/components
