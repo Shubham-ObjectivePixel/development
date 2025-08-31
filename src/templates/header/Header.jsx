@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <>
-            <header className="bg-gray-500">
+            <header className="bg-red-500">
                 Header
             </header>
         </>
