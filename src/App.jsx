@@ -1,16 +1,10 @@
-import Header from './Templates/Header/Header'
-import Footer from './Templates/Footer/Footer'
-import BannerSection from './Templates/Main/Home/BannerSection'
-import AboutSection from './Templates/Main/Home/AboutSection'
+import Header from './templates/header/Header'
+import Footer from './templates/footer/Footer'
 
 const App = () => {
     return (
         <>
             <Header></Header>
-            <main>
-                <BannerSection></BannerSection>
-                <AboutSection></AboutSection>
-            </main>
             <Footer></Footer>
         </>
     )
