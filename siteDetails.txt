@@ -28,14 +28,15 @@ Other links:
 https://chatgpt.com/share/68abd941-3208-8011-a81e-12e7de07e268
 
 Mouse Effect:
+https://codepen.io/nragland37/pen/jOgBKzd
+
+
 https://codepen.io/AdrainWolfe/pen/YzybpzB
 
 https://cursify.vercel.app/components
 https://motion.dev/docs/cursor
 
 https://gsap.com/community/forums/topic/41180-mouse-trail-mouse-cursor-effect/
-
-https://codepen.io/nragland37/details/jOgBKzd
 https://codepen.io/tag/cursor-animation
 
 https://codepen.io/Mahe76/pen/MWZqwBr

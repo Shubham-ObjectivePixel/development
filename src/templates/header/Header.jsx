@@ -1,8 +1,10 @@
+import Button from '../../Components/Button';
+
 const Header = () => {
     return (
         <>
             <header className="bg-red-500">
-                Header
+                <Button link="https://example.com" text="Butasdfaston" />
             </header>
         </>
     )
