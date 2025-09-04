@@ -3,4 +3,20 @@
 body {
     margin: 0px;
     padding: 0px;
+    background: #0E1727;
+}
+
+.container {
+    width: 100%;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.op-bg-effect {
+    background: linear-gradient(135deg, rgba(25, 173, 206, 0.2) 20%, rgba(0, 0, 0, 0) 100%);
+
+}
+
+.about-section {
+    height: 400vh;
 }

@@ -1,7 +1,7 @@
 const AboutSection = () => {
     return (
         <>
-            <section className="bg-pink-500">
+            <section className="about-section">
                 About Section
             </section>
         </>
