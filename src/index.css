@@ -14,15 +14,15 @@ body {
     margin: 0 auto;
 }
 
-.op-bg-effect {
+/* .op-bg-effect {
     background: linear-gradient(135deg, rgb(25 173 206 / 20%) 0%, rgba(0, 0, 0, 0) 100%);
 
-}
+} */
 
 .about-section {
     height: 400vh;
 }
 
-.op-nav-items {
+/* .op-nav-items {
     background-color: rgb(255 255 255 / 25%);
-}
+} */
