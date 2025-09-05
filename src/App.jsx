@@ -7,10 +7,10 @@ import SmoothScroll from './Components/Smoothscroll'
 const App = () => {
     return (
         <>
-            {/* <SmoothScroll></SmoothScroll>
-            <Header></Header>*/}
+            <SmoothScroll></SmoothScroll>
+            <Header></Header>
             <BannerSection></BannerSection>
-            {/* <AboutSection></AboutSection> */}
+            <AboutSection></AboutSection>
             <Footer></Footer>
         </>
     )
