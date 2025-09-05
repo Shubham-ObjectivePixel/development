@@ -4,8 +4,8 @@ const BannerSection = () => {
     return (
         <>
             <section className="h-[90vh] flex justify-center items-center">
-                <h1 className="text-white text-6xl text-center bold">I’m here to <span className="op-text-heighlight">bring</span><br />your <span className="op-text-heighlight">vision</span> to life.</h1>
-            </section> 
+                <h1 className="text-white text-[72px] leading-[108px] font-extrabold text-center">I am here to <span className="text-op-green">bring</span><br />your <span className="text-op-green">vision</span> into life.</h1>
+            </section>
             <Navigation></Navigation>
         </>
     )

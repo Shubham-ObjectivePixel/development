@@ -9,7 +9,7 @@ const Header = () => {
                         <a href="/">
                             <img src="/src/assets/images/logo.png" width={'175px'} alt="" />
                         </a>
-                        <h6 className='text-white'>Think Beyond With. <span className='op-text-heighlight'>Shubham</span></h6>
+                        <h6 className='text-white text-xl'>Think Beyond With. <span className='text-op-green font-medium'>Shubham.</span></h6>
                     </div>
                 </div>
             </header>
