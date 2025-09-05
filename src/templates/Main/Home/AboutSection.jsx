@@ -1,7 +1,7 @@
 const AboutSection = () => {
     return (
         <>
-            <section className="about-section">
+            <section className="about-section mt-[10vh]">
                 About Section
             </section>
         </>

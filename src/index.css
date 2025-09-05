@@ -20,3 +20,7 @@ body {
 .about-section {
     height: 400vh;
 }
+
+.op-nav-items {
+    background-color: rgb(255 255 255 / 25%);
+}
