@@ -25,7 +25,9 @@ body {
     height: 400vh;
 }
 
-
+body .cursor-element,
+body .cursor-element * {
+    pointer-events: none;}
 
 
 body .cursor-element {
@@ -33,6 +35,7 @@ body .cursor-element {
     width: 8px;
     height: 8px;
     border-radius: 100%;
+    z-index: 9999;
 }
 
 body .cursor-element * {
