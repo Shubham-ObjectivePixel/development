@@ -14,7 +14,6 @@ const App = () => {
             <AboutSection></AboutSection>
             <Footer></Footer>
             <Mousescroll></Mousescroll>
-
         </>
     )
 }

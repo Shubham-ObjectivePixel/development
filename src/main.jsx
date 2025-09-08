@@ -8,7 +8,7 @@ import Mousepointer from './Mousepointer';
 
 createRoot(document.getElementById('site')).render(
   <StrictMode>
-    <Mousepointer />
     <App />
+    <Mousepointer />
   </StrictMode>,
 )
