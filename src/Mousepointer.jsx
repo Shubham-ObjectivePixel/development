@@ -36,7 +36,7 @@ const Mousepointer = () => {
     }, []);
 
     useEffect(() => {
-        const boxes = document.querySelectorAll(".op-nav-item");
+        const boxes = document.querySelectorAll("a");
 
         const addGlow = () => glowRef.current?.classList.add("active");
         const removeGlow = () => glowRef.current?.classList.remove("active");
