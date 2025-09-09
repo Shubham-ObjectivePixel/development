@@ -3,7 +3,7 @@ import Button from '../../Components/Button';
 const Header = () => {
     return (
         <>
-            <header className="p-4 fixed w-full top-0 backdrop-blur-[12px]">
+            <header className="p-4 fixed w-full top-0 backdrop-blur-[12px] ">
                 <div className="container">
                     <div className="flex flex-wrap flex-row justify-between items-center">
                         <a href="/">

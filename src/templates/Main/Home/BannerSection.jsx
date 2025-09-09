@@ -8,7 +8,7 @@ const BannerSection = () => {
             </section>
             <Navigation></Navigation>
         </>
-    )
+    ) 
 }
 
 export default BannerSection

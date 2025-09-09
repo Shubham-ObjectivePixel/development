@@ -10,7 +10,7 @@ const App = () => {
         <>
             <SmoothScroll></SmoothScroll>
             <Header></Header>
-            <BannerSection></BannerSection>
+            <BannerSection></BannerSection> 
             <AboutSection></AboutSection>
             <Footer></Footer>
             <Mousescroll></Mousescroll>
