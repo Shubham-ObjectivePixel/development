@@ -44,10 +44,10 @@ body .cursor-element * {
 
 body .cursor-element span {
     position: fixed;
-    border: 1px solid #fff;
+    border: 1px solid var(--color-op-green);
     border-radius: 100%;
     background: transparent;
-    opacity: 0.3;
+    opacity: 0.7;
     width: 40px;
     height: 40px;
     display: block;
@@ -76,10 +76,10 @@ body .cursor-element .cursor-glow {
 }
 
 body .cursor-element .cursor-glow.active {
-    filter: blur(22px);
+    filter: blur(50px);
     width: 32px;
     height: 32px;
-    opacity: 0.5;
+    opacity: 1;
     transition-delay: 0s;
     transition: all 1s, opacity 1.24s, width 0.6s, height 0.6s, left 0s, top 0s;
 }
@@ -88,7 +88,7 @@ body .cursor-element .cursor-glow.active+span {
     background: #fff;
     opacity: 0.82;
     transform: scale(0.42) translateX(-50%) translateY(-50%);
-    box-shadow: 0px 0px 24px rgba(2, 2, 2, 0.1);
+    box-shadow: 0px 0px 40px 10px #a7e02dc4;
     transition: 0.32s ease;
     transition-delay: 0.08s;
 }
