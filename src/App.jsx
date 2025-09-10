@@ -1,14 +1,12 @@
-import Header from './templates/header/Header'
-import Footer from './templates/footer/Footer'
-import AboutSection from './templates/main/home/AboutSection'
-import BannerSection from './templates/main/home/BannerSection'
-import SmoothScroll from './Components/Smoothscroll'
-import Mousescroll from './Components/Mousescroll'
+import Header from './layouts/Header'
+import BannerSection from './pages/Home/BannerSection'
+import AboutSection from './pages/Home/AboutSection'
+import Mousescroll from './components/Mousescroll'
+import Footer from './layouts/Footer'
 
 const App = () => {
     return (
         <>
-            {/* <SmoothScroll></SmoothScroll> */}
             <Header></Header>
             <BannerSection></BannerSection>
             <AboutSection></AboutSection>

@@ -1,11 +1,11 @@
-import Navigation from "../../navigation/Navigation"
+import Navigation from "../../layouts/Navigation"
 
 const BannerSection = () => {
     return (
         <>
             <section id="op-banner-section" className="relative">
                 <div className="bg-op-darkBlue h-[150vh]">
-                    {/* <div className="op-bg-glow"></div> */}
+                    <div className="op-bg-glow"></div>
                 </div>
                 <div className="h-[100vh] absolute top-0 left-0 w-full">
                     <div className="container h-full">
