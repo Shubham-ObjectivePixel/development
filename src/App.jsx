@@ -8,9 +8,9 @@ import Mousescroll from './Components/Mousescroll'
 const App = () => {
     return (
         <>
-            <SmoothScroll></SmoothScroll>
+            {/* <SmoothScroll></SmoothScroll> */}
             <Header></Header>
-            <BannerSection></BannerSection> 
+            <BannerSection></BannerSection>
             <AboutSection></AboutSection>
             <Footer></Footer>
             <Mousescroll></Mousescroll>
