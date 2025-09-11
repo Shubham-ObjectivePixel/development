@@ -1,17 +1,13 @@
 import Header from './layouts/Header'
-import BannerSection from './pages/Home/BannerSection'
-import AboutSection from './pages/Home/AboutSection'
-import Mousescroll from './components/Mousescroll'
+import Home from './pages/Home/Home'
 import Footer from './layouts/Footer'
 
 const App = () => {
     return (
         <>
             <Header></Header>
-            <BannerSection></BannerSection>
-            <AboutSection></AboutSection>
+            <Home></Home>
             <Footer></Footer>
-            <Mousescroll></Mousescroll>
         </>
     )
 }

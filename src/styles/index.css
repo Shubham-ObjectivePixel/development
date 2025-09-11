@@ -24,13 +24,13 @@ body .cursor-element * {
 }
 
 .op-bg-glow {
-    background: linear-gradient(135deg, rgb(25 173 206 / 100%) 0%, rgba(0, 0, 0, 0) 100%);
-    position: absolute;
-    width: 680px;
-    height: 680px;
+    background: linear-gradient(135deg, rgba(25 173 206 / 100%) 80%, rgba(0, 0, 0, 0) 100%);
+    position: fixed;
+    width: 90%;
+    height: 90%;
     border-radius: 50%;
     mix-blend-mode: screen;
-    top: 50%;
+    top: 10%;
     right: 0;
     filter: blur(300px);
 }

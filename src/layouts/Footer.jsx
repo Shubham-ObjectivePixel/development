@@ -1,9 +1,12 @@
+import Mosuescroll from '../components/Mousescroll'
+
 const Footer = () => {
     return (
         <>
-            {/* <footer className="bg-gray-500 font-display">
+            <footer className="bg-gray-500 font-display">
                 Footer
-            </footer> */}
+            </footer>
+            <Mosuescroll></Mosuescroll>
         </>
     )
 }
