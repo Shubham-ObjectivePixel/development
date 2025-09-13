@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import { scrollBarMove } from "../hooks/gsapAnimations"
+import { scrollBarMove } from "../../hooks/gsapAnimations"
 
 const Mousescroll = () => {
 

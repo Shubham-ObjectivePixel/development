@@ -1,17 +1,15 @@
+import Logo from "../ui/Logo"
 import Navigation from "../layouts/Navigation"
+import Tagline from "../ui/Tagline"
 const Header = () => {
     return (
         <>
             <header className="p-4 fixed w-full top-0 backdrop-blur-[12px] z-10 ">
                 <div className="container">
                     <div className="flex flex-wrap flex-row justify-between items-center">
-                        <div className="w-[30%]">
-                            <a href="/">
-                                <img src="/src/assets/images/logo.png" width={'175px'} alt="" />
-                            </a>
-                        </div>
+                        <Logo></Logo>
                         <Navigation></Navigation>
-                        <h6 className='text-white text-xl w-[30%] text-right'>Think Beyond With. <span className='text-op-green font-medium'>Shubham.</span></h6>
+                        <Tagline></Tagline>
                     </div>
                 </div>
             </header>

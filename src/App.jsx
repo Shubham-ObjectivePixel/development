@@ -1,6 +1,6 @@
-import Header from './layouts/Header'
+import Header from './components/layouts/Header'
 import Home from './pages/Home/Home'
-import Footer from './layouts/Footer'
+import Footer from './components/layouts/Footer'
 
 const App = () => {
     return (

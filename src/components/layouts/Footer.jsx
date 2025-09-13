@@ -1,4 +1,4 @@
-import Mosuescroll from '../components/Mousescroll'
+import Mosuescroll from '../ui/Mousescroll'
 
 const Footer = () => {
     return (
