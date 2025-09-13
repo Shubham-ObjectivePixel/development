@@ -1,3 +1,4 @@
+import Navigation from "../layouts/Navigation"
 const Header = () => {
     return (
         <>
@@ -7,6 +8,7 @@ const Header = () => {
                         <a href="/">
                             <img src="/src/assets/images/logo.png" width={'175px'} alt="" />
                         </a>
+                        <Navigation></Navigation>
                         <h6 className='text-white text-xl'>Think Beyond With. <span className='text-op-green font-medium'>Shubham.</span></h6>
                     </div>
                 </div>
