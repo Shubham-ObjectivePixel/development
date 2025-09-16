@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react"
-import { bannerGlowMove} from "../../hooks/gsapAnimations"
+import { bannerGlowMove } from "../../hooks/gsapAnimations"
 
 const BannerSection = () => {
 
@@ -9,11 +9,8 @@ const BannerSection = () => {
 
     return (
         <>
-            <section id="op-banner-section" className="relative overflow-hidden">
-                <div className="w-[1px] h-[100vh] bg-op-white-10 absolute top-0 left-[75%] z-20"></div>
-                <div className="bg-op-darkBlue h-[100vh]">
-                    <div className="op-bg-glow"></div>
-                </div>
+            <section id="op-banner-section" className="relative overflow-hidden h-[100vh]">
+                {/* <div className="w-[1px] h-[100vh] bg-op-white-10 absolute top-0 left-[75%] z-20"></div> */}
                 <div className="h-[100vh] absolute top-0 left-0 w-full">
                     <div className="container h-full">
                         <div className="w-1/2 h-full flex items-center justify-end">
