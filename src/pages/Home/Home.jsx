@@ -1,4 +1,5 @@
 import BannerSection from "./BannerSection"
+import ProjectsSection from "./ProjectsSection"
 import AboutSection from "./AboutSection"
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
         <>
             <BannerSection></BannerSection>
             <AboutSection></AboutSection>
+            <ProjectsSection></ProjectsSection>
         </>
     )
 }
