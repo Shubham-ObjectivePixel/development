@@ -1,8 +1,8 @@
 const Button = () => {
     return (
-        <div className="w-[30%]">
-            <a href="/">
-                <img src="../../src/assets/images/logo.png" width={'175px'} alt="" />
+        <div className="w-[25%]">
+            <a href="/" className="w-full max-w-[175px] inline-block">
+                <img src="../../src/assets/images/logo.png" className="w-full" alt="" />
             </a>
         </div>
     )
