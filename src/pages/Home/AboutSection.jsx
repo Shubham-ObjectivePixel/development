@@ -4,21 +4,25 @@ import Movingdots from "../../components/ui/Movingdots"
 const AboutSection = () => {
     return (
         <>
-            <section className="about-section bg-black relative">
+            <section className="about-section bg-op-darkBlue relative py-[12vw]">
                 <div className="container px-30">
-                    <div className="flex flex-wrap content-center">
-                        <div className="w-[50%]">
-                            <h2 className="text-op-green text-[]">Design your dream website.</h2>
+                    <div className="flex flex-wrap content-center justify-between items-start">
+                        <div className="w-[45%]">
+                            <h2 className="text-white text-[120px] leading-[1] font-bold">Design your <span className="text-op-green">Dream</span> website<span className="text-op-green">.</span></h2>
                         </div>
-                        <div className="w-[50%]">
-                            <h2 className="text-white text-4xl leading-[1.5]">Objective Pixel is a creative web design studio that transforms ideas into modern, user-focused websites.</h2>
-                            <div className="mt-10 text-xl text-white">
-                                <p className="mb-4">From concept to launch, every project is crafted with detail, clarity, and purpose; ensuring a seamless experience for both you and your audience.</p>
-                                <p className="mb-4">With over 7 years of expertise in WordPress design and development, I create websites that are not only visually striking but also fast, secure, and performance-driven.</p>
+                        <div className="w-[45%]">
+                            <div className="text-xl text-white leading-[1.5] pt-[20vw]">
+                                <p className="mb-4">Objective Pixel helps you think bigger about what’s possible for your business online.</p>
+                                <p className="mb-4">A powerful website doesn’t just show where you are today; it inspires where you’re going. It gives you the space to grow, connect, and build trust with your audience.</p>
+                                <p className="mb-4">I work closely with you to understand your brand’s story, create a unique digital experience, and deliver a website people remember and love.</p>
+                                <p className="mb-4">With over 7 years of expertise in WordPress design, development, and website strategy, Objective Pixel bridges creativity and technology to help businesses, freelancers, and entrepreneurs thrive in the digital world.</p>
                             </div>
-                            <div className="mt-10">
-                                <Button link="#" text="Contact Now!"></Button>
-                            </div>
+                        </div>
+                    </div>
+                    <div className="mt-[10vw] flex flex-wrap content-center justify-center items-center">
+                        <h3 className="text-white text-[120px] leading-[1] font-bold text-center">Build a Stronger Online Presence<span className="text-op-green">.</span></h3>
+                        <div className="mt-20">
+                            <Button link="#" text="Start Your Project"></Button>
                         </div>
                     </div>
                 </div>
