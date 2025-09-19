@@ -36,7 +36,7 @@ const Mousepointer = () => {
     }, []);
 
     useEffect(() => {
-        const boxes = document.querySelectorAll("a");
+        const boxes = document.querySelectorAll("body a");
 
         const addGlow = () => glowRef.current?.classList.add("active");
         const removeGlow = () => glowRef.current?.classList.remove("active");
