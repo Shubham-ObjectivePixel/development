@@ -1,4 +1,7 @@
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const bannerGlowMove = (target, delay = 0) => {
     gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true })
@@ -39,4 +42,21 @@ export const bannerGlowMove = (target, delay = 0) => {
 
 export const scrollBarMove = (target, delay = 0) => {
     gsap.fromTo(target, { y: 0 }, { y: 3, delay, duration: 0.7, repeat: -1, yoyo: true, ease: "shine.inOut" });
+}
+
+export const bannerImageIncrease = (target) => {
+    gsap.fromTo(target,
+        { scaleX: 0.3 },
+        {
+            scaleX: 1,
+            duration: 3,
+            scrollTrigger: {
+                trigger: target,
+                start: "bottom 80%",
+                end: "bottom",
+                scrub: true,
+                pin: true,
+                markers: true
+            }
+        });
 }
