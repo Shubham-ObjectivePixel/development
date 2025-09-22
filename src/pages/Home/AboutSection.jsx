@@ -4,7 +4,7 @@ const AboutSection = () => {
     return (
         <>
             <section className="about-section backdrop-blur-[12px] h-[300vh] relative py-[12vw]">
-                {/* <div className="container px-30">
+                <div className="container px-30">
                     <div className="flex flex-wrap content-center justify-between items-start">
                         <div className="w-[45%]">
                             <h2 className="text-white text-[120px] leading-[1] font-bold">Design your <span className="text-op-green">Dream</span> website<span className="text-op-green">.</span></h2>
@@ -24,7 +24,7 @@ const AboutSection = () => {
                             <Button link="#" text="Start Your Project"></Button>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </section>
         </>
     )

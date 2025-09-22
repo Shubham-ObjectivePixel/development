@@ -69,7 +69,7 @@ export const headingScrollMotion = (target, delay = 2) => {
             start: "top 100%",
             end: "top 0%",
             scrub: true,
-            markers: true
+            markers: false
         },
         y: 250,
         opacity: 0,

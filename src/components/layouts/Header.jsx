@@ -8,8 +8,8 @@ const Header = () => {
                 <div className="container">
                     <div className="flex flex-wrap flex-row justify-between items-center">
                         <Logo></Logo>
-                        <Navigation></Navigation>
                         <Tagline></Tagline>
+                        <Navigation></Navigation>
                     </div>
                 </div>
             </header>

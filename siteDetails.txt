@@ -69,3 +69,29 @@ https://amaterasu.ai/
 https://kaleotemplate.webflow.io/
 
 https://markwoodland.com.au/
+
+
+https://jomor-design-2019.webflow.io/
+
+
+
+
+
+Header
+    - Logo and Hamburger Menu in Circle, when click on circle open in in actual width with three navigation "About, Work, Contact" with current same desing.
+
+Home
+    - A Banner Section
+    - Then a Work Sections with Animation cards, and a Circle button "View More"
+    - A link for About
+About
+    - A Big title comes with Text Animation
+    - Move Home data to About page with some Title animation there will be full width content
+Work
+    - A Big title comes with Text Animation
+    - All projects in cards some animations
+Contact
+    - A Big title comes with Text Animation
+    - Contact form
+
+Footer

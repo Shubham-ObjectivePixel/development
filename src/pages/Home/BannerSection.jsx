@@ -11,7 +11,7 @@ const BannerSection = () => {
 
     return (
         <>
-            <section id="op-banner-section" className="relative backdrop-blur-[12px] overflow-hidden h-[100vh]">
+            <section id="op-banner-section" className="relative backdrop-blur-[12px] overflow-hidden h-[100vh] px-8">
                 <div className="container h-full">
                     <div className="flex flex-wrap items-center h-full relative">
                         <div className="w-1/2 h-full flex items-center justify-end relative z-10">
