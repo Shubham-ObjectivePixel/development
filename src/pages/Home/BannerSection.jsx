@@ -1,10 +1,11 @@
 import { useEffect, useRef } from "react"
-import { bannerGlowMove, bannerImageIncrease } from "../../hooks/gsapAnimations"
+import { bannerGlowMove, bannerImageIncrease, headingScrollMotion } from "../../hooks/gsapAnimations"
 
 const BannerSection = () => {
 
     useEffect(() => {
         bannerGlowMove(".op-bg-glow", 6);
+        headingScrollMotion (".heading-motion", 2)
         //bannerImageIncrease("");
     }, []);
 
@@ -14,7 +15,7 @@ const BannerSection = () => {
                 <div className="container h-full">
                     <div className="flex flex-wrap items-center h-full relative">
                         <div className="w-1/2 h-full flex items-center justify-end relative z-10">
-                            <h1 className="text-white text-[72px] leading-[108px] font-extrabold text-right">I am here to <span className="text-op-green">bring</span><br />your <span className="text-op-green">vision</span> into life.</h1>
+                            <h1 className="text-white text-[72px] leading-[108px] font-extrabold text-right heading-motion">I am here to <span className="text-op-green">bring</span><br />your <span className="text-op-green">vision</span> into life.</h1>
                         </div>
                         <div className="absolute w-full">
                             <div className="flex flex-wrap items-center justify-end">
