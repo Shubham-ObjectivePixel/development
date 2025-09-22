@@ -1,9 +1,7 @@
 const ProjectsSection = () => {
     return (
         <>
-            <section className="projects-section bg-op-darkBlue h-[100vh]">
-
-            </section>
+            <section className="projects-section backdrop-blur-[12px] h-[100vh]"></section>
         </>
     )
 }

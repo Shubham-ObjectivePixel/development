@@ -1,10 +1,9 @@
 import Button from "../../components/ui/Button"
-import Movingdots from "../../components/ui/Movingdots"
 
 const AboutSection = () => {
     return (
         <>
-            <section className="about-section relative py-[12vw]">
+            <section className="about-section backdrop-blur-[12px] relative py-[12vw]">
                 <div className="container px-30">
                     <div className="flex flex-wrap content-center justify-between items-start">
                         <div className="w-[45%]">
