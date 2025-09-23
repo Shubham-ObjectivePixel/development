@@ -45,36 +45,49 @@ export const scrollBarMove = (target, delay = 0) => {
     gsap.fromTo(target, { y: 0 }, { y: 3, delay, duration: 0.7, repeat: -1, yoyo: true, ease: "shine.inOut" });
 };
 
-export const bannerImageIncrease = (target) => {
-    gsap.fromTo(target,
-        { scaleX: 0.3 },
-        {
-            scaleX: 1,
-            duration: 3,
-            scrollTrigger: {
-                trigger: target,
-                start: "bottom 80%",
-                end: "bottom",
-                scrub: true,
-                pin: true,
-                markers: true
-            }
-        });
-};
+export const bannerImageIncrease = () => {
+    // ensure initial state before any rendering flicker
+    gsap.set(".this-animate", {
+      scaleX: 0.5,
+      transformOrigin: "right center",
+    });
+  
+    // main scroll-driven tween
+    gsap.to(".this-animate", {
+      scaleX: 1.23,               // your target scale (1.0 = 100%); keep 1.23 if intended
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#op-banner-section",
+        start: "top top",        // pin when section top hits viewport top
+        end: "+=100%",           // pin for 1 viewport height (no huge spacer)
+        scrub: 1.5,              // smooth catch-up
+        pin: true,               // pin the section during the animation
+        pinSpacing: false,       // avoid extra white space after unpin
+        anticipatePin: 1,
+        markers: true,           // remove in production
+        invalidateOnRefresh: true
+      }
+    });
+  
+    // force recalculation after layout/fonts/images load
+    ScrollTrigger.refresh();
+  };
 
 export const headingScrollMotion = (target, delay = 2) => {
-    gsap.from(target, {
+    gsap.fromTo(target, {
+        y: 180,
+        duration: delay,
+        ease: "power3.out",
+    }, {
+        y: 100,
+        ease: "power3.out",
         scrollTrigger: {
             trigger: target,
-            start: "top 100%",
-            end: "top 0%",
-            scrub: true,
+            start: "bottom 80%",
+            end: "top top",
+            scrub: 2,
             markers: false
-        },
-        y: 250,
-        opacity: 0,
-        duration: delay,
-        ease: "power4.out",
+        }
     });
 };
 
