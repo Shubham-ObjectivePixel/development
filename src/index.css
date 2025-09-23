@@ -104,13 +104,6 @@ body .cursor-element .cursor-glow.active+span {
     transition-delay: 0.08s;
 }
 
-
-
-.this-animate {
-    transform-origin: right center;
-    /* important */
-    transform: scaleX(0.5);
-    /* initial 50% */
-    will-change: transform;
-    backface-visibility: hidden;
+.pinsection {
+    transform: translate(0px, 0) !important;
 }
