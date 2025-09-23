@@ -4,6 +4,7 @@ import SplitText from "gsap/SplitText"
 
 gsap.registerPlugin(ScrollTrigger,SplitText);
 
+// Moving Shadows
 export const bannerGlowMove = (target, delay = 0) => {
     gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true })
         .fromTo(target,
@@ -41,38 +42,33 @@ export const bannerGlowMove = (target, delay = 0) => {
             })
 };
 
+// Mouse Scroller Move
 export const scrollBarMove = (target, delay = 0) => {
     gsap.fromTo(target, { y: 0 }, { y: 3, delay, duration: 0.7, repeat: -1, yoyo: true, ease: "shine.inOut" });
 };
 
-export const bannerImageIncrease = () => {
-    // ensure initial state before any rendering flicker
-    gsap.set(".this-animate", {
-      scaleX: 0.5,
-      transformOrigin: "right center",
+// Increase Image Size on Scroll
+export const bannerImageIncrease = (target, sectionTrigger) => {
+    gsap.fromTo(target, {
+        scaleX: 0.5,
+        transformOrigin: "100% 50%",
+    },{
+        transform: "translate3d(300px, 0px, -150px) scaleX(1.2)",
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: sectionTrigger,
+            start: 'top top',
+            end: 'bottom top',
+            markers: true,
+            pin: true,
+            pinSpacing: true,
+            scrub: 1.5,
+            anticipatePin: 1,
+        }
     });
-  
-    // main scroll-driven tween
-    gsap.to(".this-animate", {
-      scaleX: 1.23,               // your target scale (1.0 = 100%); keep 1.23 if intended
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: "#op-banner-section",
-        start: "top top",        // pin when section top hits viewport top
-        end: "+=100%",           // pin for 1 viewport height (no huge spacer)
-        scrub: 1.5,              // smooth catch-up
-        pin: true,               // pin the section during the animation
-        pinSpacing: false,       // avoid extra white space after unpin
-        anticipatePin: 1,
-        markers: true,           // remove in production
-        invalidateOnRefresh: true
-      }
-    });
-  
-    // force recalculation after layout/fonts/images load
-    ScrollTrigger.refresh();
-  };
+};
 
+// Heading 3d Moving Animation
 export const headingScrollMotion = (target, delay = 2) => {
     gsap.fromTo(target, {
         y: 180,
@@ -90,40 +86,3 @@ export const headingScrollMotion = (target, delay = 2) => {
         }
     });
 };
-
-export const titleEntranceText = (target) => {
-    
-};
-
-
-// Function Code:
-//     ---------------
-//     // Split text into spans for staggered animation
-//         animatedText.innerHTML = animatedText.textContent
-//           .split("")
-//           .map((char) => `<span>${char}</span>`)
-//           .join("");
-  
-//         gsap.from(animatedText.querySelectorAll("span"), {
-//           scrollTrigger: {
-//             trigger: animatedText,
-//             start: "top 85%",
-//             end: "top 35%",
-//             scrub: true,
-//           },
-//           opacity: 0,
-//           y: 50,
-//           duration: 1,
-//           stagger: 0.1,
-//         });
-
-//     HTML Code:
-//     ---------------
-//     <section class="container-fluid vh-100 d-flex align-items-center justify-content-center position-relative effect-section" data-effect="staggered-letters">
-//           <button class="btn btn-dark position-absolute top-0 end-0 m-3 copy-btn">Copy Code</button>
-//           <div class="row w-100">
-//             <div class="col-12 text-center">
-//               <h1 class="animated-text"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">S</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">t</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">a</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">g</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">g</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">e</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">r</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">e</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">d</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;"> </span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">L</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">e</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">t</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">t</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">e</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">r</span><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 50px); opacity: 0;">s</span></h1>
-//             </div>
-//           </div>
-//         </section>
