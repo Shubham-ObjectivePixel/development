@@ -6,8 +6,8 @@ const Home = () => {
     return (
         <>
             <BannerSection></BannerSection>
-            <AboutSection></AboutSection>
-            <ProjectsSection></ProjectsSection>
+            {/* <AboutSection></AboutSection>
+            <ProjectsSection></ProjectsSection> */}
         </>
     )
 }
