@@ -4,14 +4,14 @@ import { bannerGlowMove, bannerImageIncrease, headingScrollMotion } from "../../
 const BannerSection = () => {
 
     useEffect(() => {
-        // bannerGlowMove(".op-bg-glow", 6);
-        // headingScrollMotion(".heading-motion", 6);
-        //bannerImageIncrease(".imageAnimation", ".pinsection");
+        bannerGlowMove(".op-bg-glow", 6);
+        headingScrollMotion(".heading-motion", 6);
+        bannerImageIncrease(".imageAnimation", ".pinsection");
     }, []);
 
     return (
         <>
-            {/* <section id="op-banner-section" className="pinsection relative backdrop-blur-[12px] min-h-screen px-8">
+            <section id="op-banner-section" className="pinsection relative backdrop-blur-[12px] min-h-screen px-8">
                 <div className="h-screen flex items-center">
                     <div className="container mx-auto flex flex-wrap h-full items-center">
                         <div className="w-full md:w-1/2 h-full flex items-center justify-end">
@@ -20,21 +20,16 @@ const BannerSection = () => {
                                 your <span className="text-op-green">vision</span> into life.
                             </h1>
                         </div>
-                        {/* <div className="w-full md:w-1/2 h-full flex items-center">
+                        <div className="w-full md:w-[60%] h-full flex items-center justify-end absolute right-8">
                             <div className="bg-black w-full h-[70vh] rounded-xl imageAnimation">
-                                <div className="w-full h-full absolute scale-x-{0.8}">
+                                <div className="w-full h-full">
                                     <img src="../src/assets/images/demo.jpg" className="rounded-xl object-cover w-full h-full" alt=""></img>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section> */}
-                <div>
-                    <div>
-                        <img src="../src/assets/images/demo.jpg" className="" alt=""></img>
-                    </div>
-                </div>
+            </section>
         </>
     )
 }

@@ -34,7 +34,7 @@ body .cursor-element * {
 }
 
 .op-bg-glow {
-    /*background: linear-gradient(135deg, #19adce 80%, #00000000 100%);*/
+    background: linear-gradient(135deg, #19adce 80%, #00000000 100%);
     position: fixed;
     width: 90%;
     height: 90%;

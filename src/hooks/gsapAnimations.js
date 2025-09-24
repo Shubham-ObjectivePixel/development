@@ -50,19 +50,20 @@ export const scrollBarMove = (target, delay = 0) => {
 // Increase Image Size on Scroll
 export const bannerImageIncrease = (target, sectionTrigger) => {
     gsap.fromTo(target, {
-        scaleX: 0.8,
-        transformOrigin: "100% center",
+        width: '65%',
+        transformOrigin: "100% 50%",
     }, {
-        scaleX: 1.20,
+        width: '100%',
+        delay: 0,
         scrollTrigger: {
             trigger: sectionTrigger,
             start: 'top top',
-            end: '80% top',
+            end: '150% top',
             markers: true,
             pin: true,
             pinSpacing: true,
-            scrub: true,
-            ease: 'linear'
+            scrub: 2,
+            ease: 'power4.inOut'
         }
     });
 };
