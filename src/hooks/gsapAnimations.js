@@ -2,7 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText"
 
-gsap.registerPlugin(ScrollTrigger,SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 // Moving Shadows
 export const bannerGlowMove = (target, delay = 0) => {
@@ -52,17 +52,17 @@ export const bannerImageIncrease = (target, sectionTrigger) => {
     gsap.fromTo(target, {
         scaleX: 0.8,
         transformOrigin: "100% center",
-    },{
+    }, {
         scaleX: 1.20,
-        ease: "power3.out",
         scrollTrigger: {
             trigger: sectionTrigger,
             start: 'top top',
-            end: '+=700',
+            end: '80% top',
             markers: true,
             pin: true,
             pinSpacing: true,
             scrub: true,
+            ease: 'linear'
         }
     });
 };

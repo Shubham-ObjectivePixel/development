@@ -7,7 +7,7 @@ const Home = () => {
         <>
             <BannerSection></BannerSection>
             <AboutSection></AboutSection>
-            {/* <ProjectsSection></ProjectsSection> */}
+            <ProjectsSection></ProjectsSection>
         </>
     )
 }
