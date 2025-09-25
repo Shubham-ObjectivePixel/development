@@ -8,7 +8,7 @@ const Navigation = () => {
                     <li className="op-nav-item"><a href="" className="inline-block rounded-full px-5 py-2 transition duration-500 transition-discrete hover:bg-op-green text-white hover:text-op-darkBlue font-medium leading-none">Work</a></li>
                     <li className="op-nav-item"><a href="" className="inline-block rounded-full px-5 py-2 transition duration-500 transition-discrete hover:bg-op-green text-white hover:text-op-darkBlue font-medium leading-none">Contact</a></li>
                 </ul>
-                <div className="toggler text-white">Open/Close</div>
+                {/* <div className="toggler text-white">Open/Close</div> */}
             </nav>
         </div>
     )
