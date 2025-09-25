@@ -80,11 +80,11 @@ https://kafeaterra.gr/
 
 
 Header
-    - Logo and Hamburger Menu in Circle, when click on circle open in in actual width with three navigation "About, Work, Contact" with current same desing.
+    - Logo and Hamburger Menu in Circle, when click on circle open in actual width with three navigation "About, Work, Contact" with current same desing.
 
 Home
     - A Banner Section
-    - Then a Work Sections with Animation cards, and a Circle button "View More"
+    - Then a Work Sections with Animation cards, and a Circle button "View More" - This site style but some new style
     - A link for About
 About
     - A Big title comes with Text Animation

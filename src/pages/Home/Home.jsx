@@ -10,7 +10,7 @@ const Home = () => {
     useLayoutEffect(() => {
         if (!glowRef.current) return;
 
-        const cleanup = bannerGlowMove(".op-bg-glow", 6, glowRef.current);
+        const cleanup = bannerGlowMove(".op-bg-glow", 11, glowRef.current);
         return () => cleanup?.();
     }, []);
     return (
@@ -19,7 +19,7 @@ const Home = () => {
                 <div className="op-bg-glow"></div>
             </div>
             <BannerSection></BannerSection>
-            <AboutSection></AboutSection>
+            {/* <AboutSection></AboutSection> */}
             <ProjectsSection></ProjectsSection>
         </>
     )

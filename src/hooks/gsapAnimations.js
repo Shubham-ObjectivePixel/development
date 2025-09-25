@@ -1,13 +1,11 @@
-// gsapAnimations.js
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 /**
- * Banner Black Box Animation (Increase width on scroll)
+ * Banner Box Animation (Increase width on scroll)
  * @param {string} target - selector of the element to animate
  * @param {HTMLElement} sectionTrigger - section DOM node to pin
  * @param {number} delay - animation duration
@@ -28,10 +26,10 @@ export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) =>
                 start: "top top",
                 end: "+=100%",
                 pin: true,
-                pinSpacing: true, // prevents blank space below
+                pinSpacing: true,
                 scrub: 2,
                 anticipatePin: 1,
-                markers: false, // remove in production
+                markers: false,
             },
         });
     }, scope);
@@ -47,10 +45,11 @@ export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) =>
  */
 export const headingScrollMotion = (target, delay = 2, scope) => {
     const ctx = gsap.context(() => {
-        gsap.fromTo(
-            target,
-            { y: 180 },
-            {
+        // Initial state
+        gsap.set(target, { y: 180 });
+
+        //Animation on Scroll
+        gsap.to(target, {
                 y: 100,
                 duration: delay,
                 ease: "lieaner",
@@ -76,39 +75,40 @@ export const headingScrollMotion = (target, delay = 2, scope) => {
  */
 export const bannerGlowMove = (target, delay = 0, scope) => {
     const ctx = gsap.context(() => {
-        gsap.timeline({ repeat: -1, yoyo: true })
-            .fromTo(
-                target,
-                {
-                    opacity: 1,
-                    x: 0,
-                    y: 0,
-                    background: "linear-gradient(135deg, rgba(25,173,206,1) 80%, rgba(0,0,0,0) 100%)",
-                },
-                {
-                    opacity: 0.5,
-                    x: -200,
-                    y: -400,
-                    background: "linear-gradient(135deg, rgba(25,148,206,1) 80%, rgba(0,0,0,0) 100%)",
-                    duration: 11,
-                    ease: "power1.inOut",
-                }
-            )
+        let tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+        // Initial state
+        gsap.set(target, {
+            opacity: 1,
+            x: 0,
+            y: 0,
+            background: "linear-gradient(135deg, rgba(25,173,206,1) 80%, rgba(0,0,0,0) 100%)",
+        });
+
+        //Animations starts from here - 1
+        tl.to(target, {
+            opacity: 0.5,
+            x: -200,
+            y: -400,
+            background: "linear-gradient(135deg, rgba(25,148,206,1) 80%, rgba(0,0,0,0) 100%)",
+            duration: delay,
+            ease: "lieaner",
+        })
             .to(target, {
                 opacity: 0.75,
                 x: 0,
                 y: -200,
                 background: "linear-gradient(135deg, rgba(125,25,206,1) 80%, rgba(0,0,0,0) 100%)",
-                duration: 11,
-                ease: "power1.inOut",
+                duration: delay,
+                ease: "lieaner",
             })
             .to(target, {
                 opacity: 1,
                 x: 0,
                 y: 0,
                 background: "linear-gradient(135deg, rgba(25,173,206,1) 80%, rgba(0,0,0,0) 100%)",
-                duration: 11,
-                ease: "power1.inOut",
+                duration: delay,
+                ease: "lieaner",
             });
     }, scope);
 
@@ -123,7 +123,7 @@ export const bannerGlowMove = (target, delay = 0, scope) => {
  */
 export const scrollBarMove = (target, delay = 0, scope) => {
     const ctx = gsap.context(() => {
-        gsap.fromTo(target, { y: 0 }, { y: 3, duration: 0.7, repeat: -1, yoyo: true, ease: "power1.inOut", delay });
+        gsap.fromTo(target, { y: 0 }, { y: 3, duration: 0.7, repeat: -1, yoyo: true, ease: "lieaner", delay });
     }, scope);
 
     return () => ctx.revert();
