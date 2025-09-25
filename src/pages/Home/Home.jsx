@@ -1,8 +1,8 @@
 import { useLayoutEffect, useRef } from "react";
 import { bannerGlowMove } from "../../hooks/gsapAnimations";
-import BannerSection from "./BannerSection"
-import ProjectsSection from "./ProjectsSection"
-import AboutSection from "./AboutSection"
+import BannerSection from "./BannerSection";
+import ProjectsSection from "./ProjectsSection";
+import AboutSection from "./AboutSection";
 
 const Home = () => {
     const glowRef = useRef();
@@ -19,7 +19,7 @@ const Home = () => {
                 <div className="op-bg-glow"></div>
             </div>
             <BannerSection></BannerSection>
-            {/* <AboutSection></AboutSection> */}
+            <AboutSection></AboutSection>
             <ProjectsSection></ProjectsSection>
         </>
     )
