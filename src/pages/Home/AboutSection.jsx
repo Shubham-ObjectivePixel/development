@@ -3,7 +3,7 @@ import Button from "../../components/ui/Button"
 const AboutSection = () => {
     return (
         <>
-            <section className="about-section backdrop-blur-[12px] h-[300vh] relative py-[12vw]">
+            <section className="about-section backdrop-blur-[12px] h-[300vh] relative py-[6vw]">
                 <div className="container px-30">
                     <div className="flex flex-wrap content-center justify-between items-start">
                         <div className="w-[45%]">
