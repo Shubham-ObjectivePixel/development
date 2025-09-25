@@ -79,13 +79,32 @@ https://kafeaterra.gr/
 
 
 
+
+
+
+
+My Thoughts:
+
+On loading there will be nothing a Dark blue background with a line once completed.
+- Glow bg will come in fade effect
+- Then the title will be shows in animation style
+- Same time the image will be show in width way 0-60% and rest will show on scroll.
+- Same time header will come from top.
+- - Add some attractive effects on the site.
+- Humangous titles on the stie.
+
+
+
+
 Header
     - Logo and Hamburger Menu in Circle, when click on circle open in actual width with three navigation "About, Work, Contact" with current same desing.
+    - Navigation style wil be this way - https://amaterasu.ai/
 
 Home
-    - A Banner Section
-    - Then a Work Sections with Animation cards, and a Circle button "View More" - This site style but some new style
-    - A link for About
+    - A Banner Section - done
+    - Before strating Projects The titles come "Recent works scrolling left to right on scroll"
+    - Then a Work Sections with Animation cards, and a Circle button "View More" - This site style but some new style https://jomor-design-2019.webflow.io/
+    - A link for About - This will be come in this way at the bottom https://kaleotemplate.webflow.io/
 About
     - A Big title comes with Text Animation
     - Move Home data to About page with some Title animation there will be full width content
