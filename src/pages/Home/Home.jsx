@@ -18,7 +18,7 @@ const Home = () => {
             <div ref={glowRef}>
                 <div className="op-bg-glow"></div>
             </div>
-            <BannerSection></BannerSection>
+            {/* <BannerSection></BannerSection> */}
             <AboutSection></AboutSection>
             <ProjectsSection></ProjectsSection>
         </>

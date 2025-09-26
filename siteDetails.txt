@@ -102,6 +102,7 @@ Header
 
 Home
     - A Banner Section - done
+    - WHO AM I section
     - Before strating Projects The titles come "Recent works scrolling left to right on scroll"
     - Then a Work Sections with Animation cards, and a Circle button "View More" - This site style but some new style https://jomor-design-2019.webflow.io/
     - A link for About - This will be come in this way at the bottom https://kaleotemplate.webflow.io/
