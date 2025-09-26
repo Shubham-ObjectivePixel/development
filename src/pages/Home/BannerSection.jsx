@@ -9,7 +9,7 @@ const BannerSection = () => {
 
         const ctx = el.current;
         const cleanup1 = headingScrollMotion(".heading-motion", 10, el.current);
-        const cleanup2 = headingFadeEffect(".title-fade-effect", 2, el.current);
+        const cleanup2 = headingFadeEffect(".title-fade-effect", 5, el.current);
         const cleanup3 = bannerImageIncrease(".imageAnimation", el.current, 2, el.current);
 
         return () => {

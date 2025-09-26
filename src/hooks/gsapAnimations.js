@@ -46,11 +46,21 @@ export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) =>
  */
 export const headingFadeEffect = (target, delay = 2, scope) => {
     const ctx = gsap.context(() => {
-        gsap.fromTo(target, { opacity: 0 }, {
-            opacity: 1,
-            duration: delay,
-            ease: "linear"
-        })
+        const elements = document.querySelectorAll(target);
+        const tl = gsap.timeline();
+
+        elements.forEach((element, index) => {
+            tl.fromTo(element,
+                { opacity: 0 },
+                {
+                    opacity: 1,
+                    duration: delay,
+                    ease: "linear",
+                    // If not the first element, delay the start
+                    delay: index === 0 ? 0 : delay * index
+                }
+            );
+        });
     }, scope);
     return () => ctx.revert();
 };
