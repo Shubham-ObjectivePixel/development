@@ -7,7 +7,7 @@ const AboutSection = () => {
                 <div className="container px-30">
                     <div className="flex flex-wrap content-center justify-between items-start">
                         <div className="w-[45%]">
-                            <h2 className="text-white text-[120px] leading-[1] font-bold">Design your <span className="text-op-green">Dream</span> website<span className="text-op-green">.</span></h2>
+                            <h2 className="text-white text-[120px] leading-[1] font-bold uppercase">Design your <span className="text-op-green">Dream</span> website<span className="text-op-green">.</span></h2>
                         </div>
                         <div className="w-[45%]">
                             <div className="text-xl text-white leading-[1.5] pt-[20vw]">
@@ -19,7 +19,7 @@ const AboutSection = () => {
                         </div>
                     </div>
                     <div className="mt-[10vw] flex flex-wrap content-center justify-center items-center">
-                        <h3 className="text-white text-[120px] leading-[1] font-bold text-center">Build a Stronger Online Presence<span className="text-op-green">.</span></h3>
+                        <h3 className="text-white text-[120px] leading-[1] font-bold text-center uppercase">Build a Stronger Online Presence<span className="text-op-green">.</span></h3>
                         <div className="mt-20">
                             <Button link="#" text="Start Your Project"></Button>
                         </div>

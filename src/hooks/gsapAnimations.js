@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
  */
 export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) => {
     const ctx = gsap.context(() => {
+        
         // Initial state
         gsap.set(target, { width: "65%", transformOrigin: "100% 50%" });
 
@@ -20,7 +21,7 @@ export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) =>
         gsap.to(target, {
             width: "100%",
             duration: delay,
-            ease: "lieaner",
+            ease: "linear",
             scrollTrigger: {
                 trigger: sectionTrigger,
                 start: "top top",
@@ -38,6 +39,24 @@ export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) =>
 };
 
 /**
+ * Heading Fade Effects
+ * @param {string} target - selector of the heading
+ * @param {number} delay - duration
+ * @param {HTMLElement} - gsap.context scope element
+ */
+export const headingFadeEffect = (target, delay = 2, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.fromTo(target, { opacity: 0 }, {
+            opacity: 1,
+            duration: delay,
+            ease: "linear"
+        })
+    }, scope);
+    return () => ctx.revert();
+};
+
+
+/**
  * Heading Scroll Motion
  * @param {string} target - selector of the heading
  * @param {number} delay - duration
@@ -52,7 +71,7 @@ export const headingScrollMotion = (target, delay = 2, scope) => {
         gsap.to(target, {
                 y: 100,
                 duration: delay,
-                ease: "lieaner",
+                ease: "linear",
                 scrollTrigger: {
                     trigger: target,
                     start: "bottom 50%",
@@ -79,28 +98,31 @@ export const bannerGlowMove = (target, delay = 0, scope) => {
 
         // Initial state
         gsap.set(target, {
-            opacity: 1,
+            opacity: 0,
             x: 0,
             y: 0,
             background: "linear-gradient(135deg, rgba(25,173,206,1) 80%, rgba(0,0,0,0) 100%)",
         });
 
-        //Animations starts from here - 1
-        tl.to(target, {
-            opacity: 0.5,
-            x: -200,
-            y: -400,
-            background: "linear-gradient(135deg, rgba(25,148,206,1) 80%, rgba(0,0,0,0) 100%)",
-            duration: delay,
-            ease: "lieaner",
+        tl.to(target,{
+            opacity: 1,
+            duration: 6,
         })
+            .to(target, {
+                opacity: 0.5,
+                x: -200,
+                y: -400,
+                background: "linear-gradient(135deg, rgba(25,148,206,1) 80%, rgba(0,0,0,0) 100%)",
+                duration: delay,
+                ease: "linear",
+            })
             .to(target, {
                 opacity: 0.75,
                 x: 0,
                 y: -200,
                 background: "linear-gradient(135deg, rgba(125,25,206,1) 80%, rgba(0,0,0,0) 100%)",
                 duration: delay,
-                ease: "lieaner",
+                ease: "linear",
             })
             .to(target, {
                 opacity: 1,
@@ -108,7 +130,7 @@ export const bannerGlowMove = (target, delay = 0, scope) => {
                 y: 0,
                 background: "linear-gradient(135deg, rgba(25,173,206,1) 80%, rgba(0,0,0,0) 100%)",
                 duration: delay,
-                ease: "lieaner",
+                ease: "linear",
             });
     }, scope);
 
@@ -123,7 +145,7 @@ export const bannerGlowMove = (target, delay = 0, scope) => {
  */
 export const scrollBarMove = (target, delay = 0, scope) => {
     const ctx = gsap.context(() => {
-        gsap.fromTo(target, { y: 0 }, { y: 3, duration: 0.7, repeat: -1, yoyo: true, ease: "lieaner", delay });
+        gsap.fromTo(target, { y: 0 }, { y: 3, duration: 0.7, repeat: -1, yoyo: true, ease: "linear", delay });
     }, scope);
 
     return () => ctx.revert();
