@@ -15,23 +15,32 @@ export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) =>
     const ctx = gsap.context(() => {
         
         // Initial state
-        gsap.set(target, { width: "65%", transformOrigin: "100% 50%" });
+        gsap.set(target, { width: "0%", transformOrigin: "100% 50%" });
 
-        // Animate width on scroll
+        // After Load
         gsap.to(target, {
-            width: "100%",
-            duration: delay,
-            ease: "linear",
-            scrollTrigger: {
-                trigger: sectionTrigger,
-                start: "top top",
-                end: "+=100%",
-                pin: true,
-                pinSpacing: true,
-                scrub: 2,
-                anticipatePin: 1,
-                markers: false,
-            },
+            width: "65%",
+            duration: 1.5,
+            delay: 1.5,
+            ease: "power2.out",
+            onComplete: () => {
+                // Animate width on scroll
+                gsap.to(target, {
+                    width: "100%",
+                    duration: delay,
+                    ease: "linear",
+                    scrollTrigger: {
+                        trigger: sectionTrigger,
+                        start: "top top",
+                        end: "+=100%",
+                        pin: true,
+                        pinSpacing: true,
+                        scrub: 2,
+                        anticipatePin: 1,
+                        markers: false,
+                    },
+                });
+            }
         });
     }, scope);
 
@@ -47,7 +56,7 @@ export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) =>
 export const headingFadeEffect = (target, delay = 2, scope) => {
     const ctx = gsap.context(() => {
         const elements = document.querySelectorAll(target);
-        const tl = gsap.timeline();
+        const tl = gsap.timeline({ delay });
 
         elements.forEach((element, index) => {
             tl.fromTo(element,
@@ -56,7 +65,6 @@ export const headingFadeEffect = (target, delay = 2, scope) => {
                     opacity: 1,
                     duration: delay,
                     ease: "linear",
-                    // If not the first element, delay the start
                     delay: index === 0 ? 0 : delay * index
                 }
             );
@@ -104,7 +112,7 @@ export const headingScrollMotion = (target, delay = 2, scope) => {
  */
 export const bannerGlowMove = (target, delay = 0, scope) => {
     const ctx = gsap.context(() => {
-        let tl = gsap.timeline({ repeat: -1, yoyo: true });
+        let tl = gsap.timeline({ repeat: -1, yoyo: true, delay: 0 });
 
         // Initial state
         gsap.set(target, {
@@ -116,7 +124,7 @@ export const bannerGlowMove = (target, delay = 0, scope) => {
 
         tl.to(target,{
             opacity: 1,
-            duration: 6,
+            duration: 1,
         })
             .to(target, {
                 opacity: 0.5,
@@ -157,6 +165,28 @@ export const scrollBarMove = (target, delay = 0, scope) => {
     const ctx = gsap.context(() => {
         gsap.fromTo(target, { y: 0 }, { y: 3, duration: 0.7, repeat: -1, yoyo: true, ease: "linear", delay });
     }, scope);
+
+    return () => ctx.revert();
+};
+
+
+/**
+ * Header Fade Down
+ * @param {string} target - Selector of the element
+ * @param {number} delay - Duration
+ * @param {HTMLElement} scope - gsap.context scope element
+ */
+export const fadeDownHeader = (target, delay = 2) => {
+    const ctx = gsap.context(() => {
+        gsap.set(target, {
+            y: '-100%',
+        });
+        gsap.to(target, {
+            y: 0,
+            delay: delay,
+            ease: "power2.out"
+        })
+    });
 
     return () => ctx.revert();
 };

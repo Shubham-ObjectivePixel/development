@@ -1,7 +1,7 @@
 const Tagline = () => {
     return (
         <div className="w-[33%] text-center">
-            {/* <p className='text-white text-xl'>Think Beyond With. <span className='text-op-green font-medium'>Shubham.</span></p> */}
+            <p className='text-white text-xl'>Think Beyond With. <span className='text-op-green font-medium'>Shubham.</span></p>
         </div>
     )
 }
