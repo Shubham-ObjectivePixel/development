@@ -117,3 +117,29 @@ Contact
     - Contact form
 
 Footer
+
+
+https://hen-ry.com/
+https://www.designatives.com/
+
+
+
+const landingText = ["connect"];
+const masterTl = gsap.timeline();
+landingText.forEach((word) => {
+  const tl = gsap.timeline({
+    ease: "power2.inOut"
+  });
+  tl.to(".landing-text", {
+    duration: 3,
+    scrambleText: {
+      text: word,
+      chars: "nghytgabdrskspoen",
+      //speed: 0.3,
+      newClass: "accent--text",
+      revealDelay: 0.5,
+      tweenLength: false
+    }
+  });
+  masterTl.add(tl);
+});

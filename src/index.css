@@ -10,26 +10,13 @@
 }
 
 @font-face {
-    font-family: 'BatlineRegular';
-    src: url('/src/assets/fonts/Batline/BatlineRegular.eot');
-    src: url('/src/assets/fonts/Batline/BatlineRegular.eot?#iefix') format('embedded-opentype'),
-        url('/src/assets/fonts/Batline/BatlineRegular.woff2') format('woff2'),
-        url('/src/assets/fonts/Batline/BatlineRegular.woff') format('woff'),
-        url('/src/assets/fonts/Batline/BatlineRegular.ttf') format('truetype'),
-        url('/src/assets/fonts/Batline/BatlineRegular.svg#DevaradRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Batline Outline';
-    src: url('/src/assets/fonts/Batline-Outline/BatlineOutline.eot');
-    src: url('/src/assets/fonts/Batline-Outline/BatlineOutline.eot?#iefix') format('embedded-opentype'),
-        url('/src/assets/fonts/Batline-Outline/BatlineOutline.woff2') format('woff2'),
-        url('/src/assets/fonts/Batline-Outline/BatlineOutline.woff') format('woff'),
-        url('/src/assets/fonts/Batline-Outline/BatlineOutline.ttf') format('truetype'),
-        url('/src/assets/fonts/Batline-Outline/BatlineOutline.svg#BatlineOutline') format('svg');
+    font-family: 'Makizlo';
+    src: url('assets/fonts/Makizlo/MakizloRegular.eot');
+    src: url('assets/fonts/Makizlo/MakizloRegular.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/Makizlo/MakizloRegular.woff2') format('woff2'),
+        url('assets/fonts/Makizlo/MakizloRegular.woff') format('woff'),
+        url('assets/fonts/Makizlo/MakizloRegular.ttf') format('truetype'),
+        url('assets/fonts/Makizlo/MakizloRegular.svg#MakizloRegular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -47,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Batline Outline', serif;
+    font-family: 'Makizlo', serif;
 }
 
 .container {
