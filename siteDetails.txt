@@ -1,16 +1,54 @@
-Basic Info:
+/* Site Basic Details */
 Domain name: objectivepixel.in
-Domain is on Godaddy
 Hosting: Hostinger
 Term: 1 year
 Email: shubham@objectivepixel.in
-Logo: Final
-Website Idea: need to find
-Content: need to build
+Price: 683.22+2408.62=3,091.84
+
+/* Site Purpose */
+Portfolio site for me,
+Audience: Local Business and Others,
+Directly Contact to my for the Website,
+
+/* Page should be on the site */
+Home:
+About:
+Works:
+  Single Works:
+Contact:
+
+/* Color I like on the site */
+Primary: #0d1827
+Secondary: #A8E02D;
+accent: #A8E02D
+neutral: White/Black/LightGray
+
+/* Typography I like on the site */
+Heading: Makizlo
+body: Manrope;
 
 
-Price:
-683.22+2408.62=3,091.84 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 Site Idea:
