@@ -28,12 +28,51 @@ Heading: Makizlo
 body: Manrope;
 
 
+/* Prepare Content */
+
+--> Home:
+Section 1:
+Heading1 : Objective Pixel
+Content: Creating websites that inspire and connect. I turn your vision into a strong online presence.
+
+Section 2:
+Heading: Works
+Text: Websites That Tell Stories
+(Here i can showcase thumbnails/screenshots of my client projects.)
+
+
+Section 3:
+The Power of Having Your Own Website
+
+Your website is more than just an online address — it’s your digital identity.
+
+It builds trust and credibility, proving you’re serious about your business.
+It operates 24/7, bringing opportunities while you sleep.
+It helps you reach more people, connect with your audience, and grow.
+It gives you full control over your brand’s story, unlike social media platforms.
+
+In today’s world, a strong online presence is essential — not optional.
+
+CTA
+Let’s Build Something That Stands Out
+button
+
+Footer
 
 
 
+--> About
+Hi, I’m Shubham, the face behind Objective Pixel. What looks like a brand is really my one-man mission fueled by passion, creativity, and experience.
 
+For over 7 years, I’ve helped businesses, entrepreneurs, and freelancers build their digital presence with WordPress design and development. I create websites that not only look great but also perform well. These sites tell stories, connect with people, and inspire trust.
 
+As a tech enthusiast, I go beyond design and development. I solve problems, optimize for speed and SEO, ensure security, and introduce innovative ideas to help businesses grow online. My goal is to blend creativity with technology. This way, your website becomes a platform for your vision to thrive.
 
+At Objective Pixel, it’s not about a team or a big agency. It’s about me working directly with you. I understand your needs and deliver a personalized solution. Every line of code, every pixel, and every idea comes from my desk, with full attention to detail.
+
+Objective Pixel is my way of helping you expand your online business vision.
+
+Let’s build something that reflects where you are today and inspires where you can go tomorrow.
 
 
 
@@ -242,243 +281,3 @@ landingText.forEach((word) => {
 
 
 
-Starting a website from scratch involves both strategic planning and technical execution. Here's a step-by-step breakdown of the entire process — from defining goals to designing, developing, and launching your website.
-
-✅ STEP 1: PLAN YOUR WEBSITE
-1. Define Purpose & Goals
-
-Ask yourself:
-
-What is the website for? (Portfolio, business, blog, e-commerce, etc.)
-
-Who is the target audience?
-
-What action should visitors take? (Contact, purchase, sign up, etc.)
-
-2. List Core Pages
-
-Usually, you’ll start with:
-
-Home – Overview, key features or offers
-
-About – Company or personal info
-
-Services/Products – What you offer
-
-Blog/News – Optional for content marketing
-
-Contact – Form, map, details
-
-Optional:
-
-FAQs, Testimonials, Gallery, Careers, Terms, Privacy Policy
-
-🎨 STEP 2: DESIGN IDENTITY
-1. Choose a Brand Name + Domain
-
-Short, memorable, relevant
-
-Check domain availability (e.g., Namecheap
-, GoDaddy
-)
-
-Consider social media handle availability
-
-2. Logo
-
-Use a tool like Looka
-, Canva
-, or hire a designer
-
-Formats to get: PNG, SVG, favicon
-
-3. Brand Colors
-
-Choose 2–4 colors:
-
-Primary (used most often)
-
-Secondary (used to highlight or contrast)
-
-Accent (used for buttons/CTAs)
-
-Background/neutral (whites/grays)
-
-Tools: Coolors.co
-, Adobe Color
-
-4. Typography
-
-Pick 1–2 fonts:
-
-Headings font (bolder)
-
-Body font (easy to read)
-
-Resources: Google Fonts
-
-🧱 STEP 3: PREPARE CONTENT
-
-Start with writing or collecting content for each page.
-
-Content Checklist by Page:
-1. Home Page
-
-Hero section (headline, subheadline, CTA button)
-
-Short intro/about
-
-Features/services preview
-
-Testimonials or client logos
-
-CTA section
-
-2. About Page
-
-Your story
-
-Mission, values
-
-Team info or photos
-
-Why choose you
-
-3. Services/Products Page
-
-List of offerings
-
-Descriptions, benefits, pricing (if needed)
-
-Service-specific pages (optional)
-
-4. Contact Page
-
-Contact form
-
-Email, phone
-
-Map (if location-based)
-
-Social links
-
-5. Blog (Optional)
-
-Write 2–3 articles to start
-
-Topics relevant to your audience
-
-🛠 STEP 4: CHOOSE PLATFORM OR STACK
-Non-technical (easier/faster):
-
-Wix – Drag-and-drop
-
-Squarespace – Design-focused
-
-Webflow – Custom design, more control
-
-WordPress – Popular, plugins, blog-friendly
-
-Technical (more control):
-
-HTML/CSS/JS for simple static sites
-
-React/Next.js for modern, fast apps
-
-Backend (optional): Node.js, Django, PHP, etc.
-
-🧩 STEP 5: DESIGN & BUILD
-If using a website builder:
-
-Pick a template close to your vision
-
-Customize branding (logo, colors, fonts)
-
-Insert your content
-
-Set up navigation/menu
-
-If coding:
-
-Set up a project folder
-
-Build layout (HTML structure)
-
-Style with CSS (or Tailwind, Bootstrap, etc.)
-
-Add interactions with JavaScript
-
-Make it responsive (mobile-friendly)
-
-🌐 STEP 6: GET ONLINE
-1. Buy a Domain
-
-Use domain registrars like:
-
-Namecheap
-
-Google Domains (now Squarespace Domains)
-
-GoDaddy
-
-2. Choose Hosting
-
-Depending on the platform:
-
-WordPress → SiteGround, Bluehost
-
-Static Site → Netlify, Vercel, GitHub Pages
-
-E-commerce → Shopify, BigCommerce
-
-3. Connect Domain to Hosting
-
-Update your DNS records to point to your hosting provider.
-
-4. Add SSL (HTTPS)
-
-Most hosts offer this free.
-
-🔍 STEP 7: TEST EVERYTHING
-
-Check layout on mobile and desktop
-
-Test all links and forms
-
-Proofread content
-
-Make sure pages load fast
-
-🚀 STEP 8: LAUNCH!
-
-Announce your site (social media, email)
-
-Submit to Google Search Console for indexing
-
-Monitor site traffic using Google Analytics
-
-🔄 POST-LAUNCH: Maintain & Improve
-
-Update content regularly
-
-Add blog posts (if relevant)
-
-Monitor performance and SEO
-
-Collect feedback from users
-
-Want a Website Starter Kit?
-
-If you'd like, I can help you build:
-
-A sitemap
-
-A color palette
-
-A basic logo
-
-Page content template
-
-And suggest a platform or code stack
-
-Would you prefer a no-code/drag-and-drop platform or do you want to build it from code?
