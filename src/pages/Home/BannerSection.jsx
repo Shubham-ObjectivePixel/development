@@ -26,16 +26,16 @@ const BannerSection = () => {
                     <div className="container mx-auto flex flex-wrap h-full items-center relative">
                         <div className="w-full md:w-1/2 h-full flex items-center justify-end relative">
                             <div className="heading-motion">
-                                <h1 className="text-white text-[6.5vw] uppercase leading-[108px] font-extrabold text-right relative title-fade-effect">
-                                    I am here to <span className="text-op-green text-stroke-green">bring</span> your <span className="text-op-green text-stroke-green">vision</span> into life.
+                                <h1 className="text-white text-[6.5vw] uppercase leading-[108px] text-right relative title-fade-effect">
+                                    I am here to <span className="text-op-green">bring</span> your <span className="text-op-green">vision</span> into life.
                                     {/* Lorem ipsum dolor sit amet consectetur. */}
                                 </h1>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 h-full flex items-center justify-end absolute left-0 top-0 z-10">
                             <div className="heading-motion">
-                                <h6 className="text-op-transparent text-stroke uppercase text-[6.5vw] leading-[108px] font-extrabold text-right relative title-fade-effect">
-                                    I am here to <span className="text-op-transparent text-stroke-green">bring</span> your <span className="text-op-transparent text-stroke-green">vision</span> into life.
+                                <h6 className="text-white text-stroke uppercase text-[6.5vw] leading-[108px] text-right relative title-fade-effect">
+                                    I am here to <span className="text-op-green">bring</span> your <span className="text-op-green">vision</span> into life.
                                     {/* Lorem ipsum dolor sit amet consectetur. */}
                                 </h6>
                             </div>

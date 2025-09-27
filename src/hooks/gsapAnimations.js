@@ -13,7 +13,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
  */
 export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) => {
     const ctx = gsap.context(() => {
-        
+
         // Initial state
         gsap.set(target, { width: "0%", transformOrigin: "100% 50%" });
 
@@ -32,7 +32,7 @@ export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) =>
                     scrollTrigger: {
                         trigger: sectionTrigger,
                         start: "top top",
-                        end: "+=100%",
+                        end: "+=130%",
                         pin: true,
                         pinSpacing: true,
                         scrub: 2,
@@ -87,17 +87,17 @@ export const headingScrollMotion = (target, delay = 2, scope) => {
 
         //Animation on Scroll
         gsap.to(target, {
-                y: 100,
-                duration: delay,
-                ease: "linear",
-                scrollTrigger: {
-                    trigger: target,
-                    start: "bottom 50%",
-                    end: "bottom top",
-                    scrub: 1.5,
-                    markers: false,
-                },
-            }
+            y: 100,
+            duration: delay,
+            ease: "linear",
+            scrollTrigger: {
+                trigger: target,
+                start: "bottom 50%",
+                end: "bottom top",
+                scrub: 1.5,
+                markers: false,
+            },
+        }
         );
     }, scope);
 
@@ -122,7 +122,7 @@ export const bannerGlowMove = (target, delay = 0, scope) => {
             background: "linear-gradient(135deg, rgba(25,173,206,1) 80%, rgba(0,0,0,0) 100%)",
         });
 
-        tl.to(target,{
+        tl.to(target, {
             opacity: 1,
             duration: 1,
         })

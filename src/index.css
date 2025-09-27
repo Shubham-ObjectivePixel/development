@@ -9,6 +9,33 @@
     --color-op-transparent: rgb(255 255 255 / 0%);
 }
 
+@font-face {
+    font-family: 'BatlineRegular';
+    src: url('/src/assets/fonts/Batline/BatlineRegular.eot');
+    src: url('/src/assets/fonts/Batline/BatlineRegular.eot?#iefix') format('embedded-opentype'),
+        url('/src/assets/fonts/Batline/BatlineRegular.woff2') format('woff2'),
+        url('/src/assets/fonts/Batline/BatlineRegular.woff') format('woff'),
+        url('/src/assets/fonts/Batline/BatlineRegular.ttf') format('truetype'),
+        url('/src/assets/fonts/Batline/BatlineRegular.svg#DevaradRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Batline Outline';
+    src: url('/src/assets/fonts/Batline-Outline/BatlineOutline.eot');
+    src: url('/src/assets/fonts/Batline-Outline/BatlineOutline.eot?#iefix') format('embedded-opentype'),
+        url('/src/assets/fonts/Batline-Outline/BatlineOutline.woff2') format('woff2'),
+        url('/src/assets/fonts/Batline-Outline/BatlineOutline.woff') format('woff'),
+        url('/src/assets/fonts/Batline-Outline/BatlineOutline.ttf') format('truetype'),
+        url('/src/assets/fonts/Batline-Outline/BatlineOutline.svg#BatlineOutline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 body {
     font-weight: 400;
     font-family: "Manrope", sans-serif;
@@ -20,8 +47,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Source Sans 3', serif;
-    font-weight: bolder;
+    font-family: 'Batline Outline', serif;
 }
 
 .container {
@@ -108,12 +134,4 @@ body .cursor-element .cursor-glow.active+span {
 
 .pinsection {
     transform: translate(0px, 0) !important;
-}
-
-.text-stroke, .text-stroke-green{
-    -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: #fff;
-}
-.text-stroke-green{
-    -webkit-text-stroke-color: var(--color-op-green);
 }
