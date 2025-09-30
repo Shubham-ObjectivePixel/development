@@ -1,6 +1,6 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitText from "gsap/SplitText";
+import { SplitText } from "gsap/SplitText";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -11,36 +11,36 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
  * @param {number} delay - animation duration
  * @param {HTMLElement} scope - gsap.context scope element
  */
-export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) => {
+export const bannerImageAnimation = (target, sectionTrigger, delay = 2, scope) => {
     const ctx = gsap.context(() => {
 
         // Initial state
-        gsap.set(target, { width: "0%", transformOrigin: "100% 50%" });
+        gsap.set(target, { y: 0, scale: 0.6 });
 
         // After Load
         gsap.to(target, {
-            width: "65%",
+            y: 0,
             duration: 1.5,
-            delay: 1.5,
+            delay: 2,
             ease: "power2.out",
-            onComplete: () => {
-                // Animate width on scroll
-                gsap.to(target, {
-                    width: "100%",
-                    duration: delay,
-                    ease: "linear",
-                    scrollTrigger: {
-                        trigger: sectionTrigger,
-                        start: "top top",
-                        end: "+=130%",
-                        pin: true,
-                        pinSpacing: true,
-                        scrub: 2,
-                        anticipatePin: 1,
-                        markers: false,
-                    },
-                });
-            }
+            // onComplete: () => {
+            //     // Animate width on scroll
+            //     gsap.to(target, {
+            //         width: "100%",
+            //         duration: delay,
+            //         ease: "linear",
+            //         scrollTrigger: {
+            //             trigger: sectionTrigger,
+            //             start: "top top",
+            //             end: "+=130%",
+            //             pin: true,
+            //             pinSpacing: true,
+            //             scrub: 2,
+            //             anticipatePin: 1,
+            //             markers: false,
+            //         },
+            //     });
+            // }
         });
     }, scope);
 
@@ -55,20 +55,27 @@ export const bannerImageIncrease = (target, sectionTrigger, delay = 2, scope) =>
  */
 export const headingFadeEffect = (target, delay = 2, scope) => {
     const ctx = gsap.context(() => {
-        const elements = document.querySelectorAll(target);
-        const tl = gsap.timeline({ delay });
+        const tl = gsap.timeline({ delay: 1 });
+        const split = new SplitText(target, { type: "chars" });
 
-        elements.forEach((element, index) => {
-            tl.fromTo(element,
-                { opacity: 0 },
-                {
-                    opacity: 1,
-                    duration: delay,
-                    ease: "linear",
-                    delay: index === 0 ? 0 : delay * index
+        tl.fromTo(split.chars,
+            { rotateY: 75, y: 0, opacity: 0, transformOrigin: "50% 50%" },
+            {
+                rotateY: 0,
+                y: 30,
+                opacity: 1,
+                duration: delay,
+                ease: "elastic.out(1,0.3)",
+                stagger: 0.10,
+                onComplete: () => {
+                    tl.to(target, {
+                        scale: 1.1,
+                        y: -200,
+                        duration: delay,
+                    });
                 }
-            );
-        });
+            }
+        );
     }, scope);
     return () => ctx.revert();
 };
@@ -83,11 +90,10 @@ export const headingFadeEffect = (target, delay = 2, scope) => {
 export const headingScrollMotion = (target, delay = 2, scope) => {
     const ctx = gsap.context(() => {
         // Initial state
-        gsap.set(target, { y: 180 });
+        gsap.set(target, {});
 
         //Animation on Scroll
         gsap.to(target, {
-            y: 100,
             duration: delay,
             ease: "linear",
             scrollTrigger: {
@@ -112,7 +118,7 @@ export const headingScrollMotion = (target, delay = 2, scope) => {
  */
 export const bannerGlowMove = (target, delay = 0, scope) => {
     const ctx = gsap.context(() => {
-        let tl = gsap.timeline({ repeat: -1, yoyo: true, delay: 0 });
+        let tl = gsap.timeline({ repeat: -1, yoyo: true, delay: 2.3 });
 
         // Initial state
         gsap.set(target, {
@@ -190,3 +196,15 @@ export const fadeDownHeader = (target, delay = 2) => {
 
     return () => ctx.revert();
 };
+
+
+/**
+ * Scrambling Text
+ * @param {string} target - Selector of the element
+ * @param {number} delay - Duration
+ * @param {HTMLElement} scope - gsap.context scope element
+ * @param {string} textValue - Text in output
+ */
+export const scramblingText = (target, speed = 2, scope, textValue) => {
+
+}

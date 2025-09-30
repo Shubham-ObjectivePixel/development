@@ -7,6 +7,7 @@
     --color-op-white-25: rgb(255 255 255 / 25%);
     --color-op-white-10: rgb(255 255 255 / 10%);
     --color-op-transparent: rgb(255 255 255 / 0%);
+    --text-shadow-op-shadow: 0 0 59px #0000004f;
 }
 
 @font-face {
@@ -50,13 +51,7 @@ body .cursor-element * {
 
 .op-bg-glow {
     background: linear-gradient(135deg, #19adce 80%, #00000000 100%);
-    position: fixed;
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
     mix-blend-mode: screen;
-    top: 10%;
-    right: 0;
     filter: blur(300px);
 }
 
@@ -121,4 +116,9 @@ body .cursor-element .cursor-glow.active+span {
 
 .pinsection {
     transform: translate(0px, 0) !important;
+}
+
+.text-stroke {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-op-green);
 }
