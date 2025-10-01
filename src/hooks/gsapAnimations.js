@@ -19,25 +19,61 @@ export const bannerImageAnimation = (target, sectionTrigger, delay = 2, scope) =
 
         // After Load
         gsap.to(target, {
-            y: 0,
+            y: -450,
             duration: 1.5,
-            delay: 2,
+            delay: 3.2,
             ease: "power2.out",
+            onComplete: () => {
+                // Animate width on scroll
+                gsap.to(target, {
+                    scale:1,
+                    duration: delay,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: sectionTrigger,
+                        start: "top top",
+                        end: "top+=20%",
+                        pin: true,
+                        pinSpacing: true,
+                        scrub: 1,
+                        anticipatePin: 1,
+                        markers: false,
+                    },
+                });
+
+                gsap.to(target, {
+                    opacity: 0.5, // Change opacity when scrolling
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: ".anotherSticky",
+                        start: "+=40% top", // Start when the section enters the viewport from below
+                        end: "+=300%", // End when the section is near the top of the viewport
+                        scrub: 0.5,
+                        pin: target,
+                        pinSpacing: true,
+                        markers: true, // Show markers for debugging
+                    },
+                });
+            }
             // onComplete: () => {
-            //     // Animate width on scroll
+            //     ScrollTrigger.create({
+            //         trigger: sectionTrigger,
+            //         start: "top top",
+            //         end: "bottom top",
+            //         pin: target,
+            //         pinSpacing: false,
+            //         markers: true,
+            //     });
+
             //     gsap.to(target, {
-            //         width: "100%",
+            //         scale: 1,
             //         duration: delay,
-            //         ease: "linear",
+            //         ease: "power2.out",
             //         scrollTrigger: {
             //             trigger: sectionTrigger,
             //             start: "top top",
-            //             end: "+=130%",
-            //             pin: true,
-            //             pinSpacing: true,
-            //             scrub: 2,
-            //             anticipatePin: 1,
-            //             markers: false,
+            //             end: "top+=20%",
+            //             scrub: 1,
             //         },
             //     });
             // }
@@ -48,12 +84,12 @@ export const bannerImageAnimation = (target, sectionTrigger, delay = 2, scope) =
 };
 
 /**
- * Heading Fade Effects
+ * Welcome Heading Animation
  * @param {string} target - selector of the heading
  * @param {number} delay - duration
  * @param {HTMLElement} - gsap.context scope element
  */
-export const headingFadeEffect = (target, delay = 2, scope) => {
+export const bannerHeadingEffect = (target, delay = 2, scope) => {
     const ctx = gsap.context(() => {
         const tl = gsap.timeline({ delay: 1 });
         const split = new SplitText(target, { type: "chars" });
@@ -70,7 +106,7 @@ export const headingFadeEffect = (target, delay = 2, scope) => {
                 onComplete: () => {
                     tl.to(target, {
                         scale: 1.1,
-                        y: -200,
+                        y: -250,
                         duration: delay,
                     });
                 }
