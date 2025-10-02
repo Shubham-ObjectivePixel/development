@@ -16,7 +16,7 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope, ne
         const split = new SplitText(target, { type: "chars" });
 
         tl.fromTo(split.chars,
-            { rotateY: 75, y: 0, opacity: 0, transformOrigin: "50% 50%" },
+            { rotateY: 75, y: 0, opacity: 0, transformOrigin: "0% 50%" },
             {
                 rotateY: 0,
                 y: 30,
@@ -27,7 +27,7 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope, ne
                 onComplete: () => {
                     tl.to(target, {
                         scale: 1.3,
-                        transformOrigin: "50% 50%",
+                        transformOrigin: "0% 50%",
                         duration: 9,
                         delay: 9,
                         ease: "linear",
@@ -35,7 +35,7 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope, ne
                             trigger: sectionTrigger,
                             markers: false,
                             start: "bottom bottom",
-                            end: "+=50% bottom",
+                            end: "+=80% bottom",
                             pin: true,
                             pinSpacing: true,
                             pinSpacer: 20,
@@ -159,9 +159,23 @@ export const bannerGlowMove = (target, delay = 0, scope) => {
  * @param {number} delay - duration
  * @param {HTMLElement} scope - gsap.context scope element
  */
-export const scrollBarMove = (target, delay = 0, scope) => {
+export const scrollToExplore = (target, delay = 0, scope) => {
     const ctx = gsap.context(() => {
-        gsap.fromTo(target, { y: 0 }, { y: 3, duration: 0.7, repeat: -1, yoyo: true, ease: "linear", delay });
+        const split = new SplitText(target, { type: "chars" });
+        gsap.set(split.chars, { opacity: 0 });
+
+        const tl = gsap.timeline({ delay: 5, repeat: -1 });
+
+        tl.to(split.chars, {
+            opacity: 1,
+            duration: 2,
+            ease: "power2.out",
+            stagger: {
+                each: 0.1,
+                repeat: 1,
+                yoyo: true
+            }
+        });
     }, scope);
 
     return () => ctx.revert();

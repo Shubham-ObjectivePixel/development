@@ -1,16 +1,16 @@
 import { useEffect } from "react"
-import { scrollBarMove } from "../../hooks/gsapAnimations"
+import { scrollToExplore } from "../../hooks/gsapAnimations"
 
 const Mousescroll = () => {
 
     useEffect(() => {
-        scrollBarMove(".op-scrollBar", 0.8);
+        scrollToExplore(".scroll-to-explore", 0.8);
     }, []);
 
     return (
         <>
-            <div className="w-[31px] h-[50px] rounded-full flex flex-wrap items-start justify-center pt-2 border-2 border-white fixed bottom-4 right-4">
-                <div className="op-scrollBar w-[3px] h-[10px] bg-op-green rounded-full"></div>
+            <div className="fixed bottom-4 left-4">
+                <p className="text-white uppercase text-xs tracking-widest scroll-to-explore">scroll to explore</p>
             </div>
         </>
     )

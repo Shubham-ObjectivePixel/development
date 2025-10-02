@@ -120,5 +120,5 @@ body .cursor-element .cursor-glow.active+span {
 
 .text-stroke {
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--color-op-green);
+    -webkit-text-stroke-color: var(--color-op-white);
 }
