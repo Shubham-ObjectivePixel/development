@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
-import { bannerImageAnimation, bannerHeadingEffect } from "../../hooks/gsapAnimations";
+import { bannerHeadingEffect, bannerTextEffect } from "../../hooks/gsapAnimations";
 
 const BannerSection = () => {
     const el = useRef();
@@ -8,25 +8,23 @@ const BannerSection = () => {
         if (!el.current) return;
 
         const ctx = el.current;
-        const cleanup1 = bannerHeadingEffect(".title-fade-effect", 1.5, el.current);
-        const cleanup3 = bannerImageAnimation(".imageAnimation", el.current, 2, el.current);
+        const cleanup1 = bannerHeadingEffect(".branding-fade", el.current, 1.5, el.current);
+        const cleanup2 = bannerTextEffect(".tagline-effect", el.current);
 
         return () => {
             cleanup1?.();
-            cleanup3?.();
+            cleanup2?.();
         };
     }, []);
 
     return (
         <>
-            <section id="op-banner-section" ref={el} className="relative px-8">
-                <div className="flex flex-wrap items-center justify-center h-screen">
-                    <h1 className="title-fade-effect text-[#fdfcfc] text-[10vw] leading-[normal] text-center relative">
-                        Objective Pixel
+            <section id="op-banner-section" ref={el} className="relative px-24">
+                <div className="flex flex-wrap items-center content-center h-screen gap-8">
+                    <h1 className="text-white text-[10vw] w-full leading-[normal] text-center relative z-10 branding-fade">
+                        Objective<span className="text-op-green">Pixel</span>
                     </h1>
-                </div>
-                <div className="flex flex-wrap items-center justify-center anotherSticky">
-                    <img src="../src/assets/images/demo.jpg" className="rounded-xl w-full h-full imageAnimation" alt=""></img>
+                    <p className="text-white pt-4 text-3xl leading-normal tagline-effect">Creating websites that <span className="text-op-green">inspire</span> and connect.<br />I turn your vision into a strong online <span className="text-op-green">presence.</span></p>
                 </div>
             </section>
         </>

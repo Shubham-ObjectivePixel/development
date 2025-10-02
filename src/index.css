@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --color-op-darkBlue: #0d1827;
+    --color-op-darkBlue: #021227;
     --color-op-green: #A8E02D;
     --color-op-white: rgb(255 255 255);
     --color-op-white-25: rgb(255 255 255 / 25%);
