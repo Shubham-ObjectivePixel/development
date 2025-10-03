@@ -1,5 +1,5 @@
 import Header from './components/layouts/Header'
-import Home from './pages/Home/Home'
+import HomePage from './pages/Home/HomePage'
 import Footer from './components/layouts/Footer'
 import SmoothScroll from './hooks/Smoothscroll'
 
@@ -7,7 +7,7 @@ const App = () => {
     return (
         <>
             <Header></Header>
-            <Home></Home>
+            <HomePage></HomePage>
             <Footer></Footer>
             <SmoothScroll></SmoothScroll>
         </>

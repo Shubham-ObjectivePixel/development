@@ -108,7 +108,7 @@ export const headingScrollMotion = (target, delay = 2, scope) => {
  * @param {number} delay - duration
  * @param {HTMLElement} scope - gsap.context scope element
  */
-export const bannerGlowMove = (target, delay = 0, scope) => {
+export const MovingGlowAnimation = (target, delay = 0, scope) => {
     const ctx = gsap.context(() => {
         let tl = gsap.timeline({ repeat: -1, yoyo: true, delay: 2.5 });
 
