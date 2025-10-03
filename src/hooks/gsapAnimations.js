@@ -212,11 +212,44 @@ export const fadeDownHeader = (target, delay = 5) => {
  */
 export const navigationAnimation = (target, speed = 2, scope) => {
     const ctx = gsap.context(() => {
-        gsap.set(target, {
-            scale: 0,
-        });
         gsap.to(target, {
-            scale: 70,
+            scale: 60,
+            duration: speed,
+            ease: "linear",
+        });
+    }, scope);
+    return () => ctx.revert();
+}
+
+/**
+ * Scrambling Text
+ * @param {string} target - Selector of the element
+ * @param {number} speed - Duration
+ * @param {HTMLElement} scope - gsap.context scope element
+ */
+export const navigationCloseAnimation = (target, speed = 2, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.to(target, {
+            scale: 0,
+            duration: speed,
+            ease: "linear",
+        });
+    }, scope);
+    return () => ctx.revert();
+}
+
+
+/**
+ * Scrambling Text
+ * @param {string} target - Selector of the element
+ * @param {number} speed - Duration
+ * @param {HTMLElement} scope - gsap.context scope element
+ */
+export const mouseOverEffect = (target, speed = 2, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.to(target, {
+            color: "#000000",
+            backgroundColor: "#fff",
             duration: speed,
             ease: "linear",
         });

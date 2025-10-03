@@ -5,8 +5,8 @@ import GlowingLight from "../../components/ui/GlowingLight";
 const HomePage = () => {
     return (
         <>
-            {/* <GlowingLight></GlowingLight> */}
-            {/* <BannerSection></BannerSection> */}
+            <GlowingLight></GlowingLight>
+            <BannerSection></BannerSection>
             <ProjectsSection></ProjectsSection>
         </>
     )
