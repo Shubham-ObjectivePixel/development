@@ -7,7 +7,7 @@ const HomePage = () => {
         <>
             {/* <GlowingLight></GlowingLight> */}
             {/* <BannerSection></BannerSection> */}
-            {/* <ProjectsSection></ProjectsSection> */}
+            <ProjectsSection></ProjectsSection>
         </>
     )
 }

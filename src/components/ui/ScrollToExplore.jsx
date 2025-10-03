@@ -1,10 +1,10 @@
 import { useEffect } from "react"
 import { scrollToExplore } from "../../hooks/gsapAnimations"
 
-const Mousescroll = () => {
+const ScrollToExplore = () => {
 
     useEffect(() => {
-        scrollToExplore(".scroll-to-explore", 0.8);
+        scrollToExplore(".scroll-to-explore", 1);
     }, []);
 
     return (
@@ -16,4 +16,4 @@ const Mousescroll = () => {
     )
 }
 
-export default Mousescroll
+export default ScrollToExplore

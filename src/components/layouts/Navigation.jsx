@@ -10,8 +10,7 @@ const Navigation = () => {
                         <TbGridDots className="w-[25px] h-[25px]" />
                     </div>
                 </div>
-                {/* <div className="w-[80%] bg-white h-[400px] p-8 absolute rounded-lg backdrop-blur-[80px]"></div> */}
-
+                <div className="w-[80%] bg-white h-[400px] p-8 absolute rounded-lg backdrop-blur-[80px]"></div>
             </div>
         </>
     )

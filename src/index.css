@@ -23,18 +23,12 @@
     font-display: swap;
 }
 
-
 body {
     font-weight: 400;
     font-family: "Manrope", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Makizlo', serif;
 }
 
@@ -84,7 +78,7 @@ body .cursor-element .cursor-glow {
     pointer-events: none;
     width: 100px;
     height: 100px;
-    background: white;
+    background: var(--color-op-white);
     border-radius: 100%;
     z-index: 10;
     opacity: 0;
@@ -106,19 +100,10 @@ body .cursor-element .cursor-glow.active {
 }
 
 body .cursor-element .cursor-glow.active+span {
-    background: #fff;
+    background: var(--color-op-white);
     opacity: 0.82;
     transform: scale(0.42) translateX(-50%) translateY(-50%);
     box-shadow: 0 0px 21px 4px #a7e02dc4;
     transition: 0.32s ease;
     transition-delay: 0.08s;
-}
-
-.pinsection {
-    transform: translate(0px, 0) !important;
-}
-
-.text-stroke {
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: var(--color-op-white);
 }

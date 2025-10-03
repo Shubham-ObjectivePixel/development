@@ -1,9 +1,9 @@
-import Mosuescroll from '../ui/Mousescroll'
+import ScrollToExplore from '../ui/ScrollToExplore'
 
 const Footer = () => {
     return (
         <>
-            <Mosuescroll></Mosuescroll>
+            <ScrollToExplore />
         </>
     )
 }

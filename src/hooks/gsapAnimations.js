@@ -159,12 +159,12 @@ export const MovingGlowAnimation = (target, delay = 0, scope) => {
  * @param {number} delay - duration
  * @param {HTMLElement} scope - gsap.context scope element
  */
-export const scrollToExplore = (target, delay = 0, scope) => {
+export const scrollToExplore = (target, delay = 2) => {
     const ctx = gsap.context(() => {
         const split = new SplitText(target, { type: "chars" });
-        gsap.set(split.chars, { opacity: 0 });
+        gsap.set(split.chars, { opacity: 0.6 });
 
-        const tl = gsap.timeline({ delay: 5, repeat: -1 });
+        const tl = gsap.timeline({ delay: delay, repeat: -1 });
 
         tl.to(split.chars, {
             opacity: 1,
@@ -176,7 +176,7 @@ export const scrollToExplore = (target, delay = 0, scope) => {
                 yoyo: true
             }
         });
-    }, scope);
+    });
 
     return () => ctx.revert();
 };
