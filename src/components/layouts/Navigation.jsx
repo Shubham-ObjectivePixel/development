@@ -25,8 +25,8 @@ const Navigation = () => {
                     </div>
                 </div>
                 <div className="navigation-wrapper">
-                    <div className="bg-op-green w-[80px] h-[80px] rounded-[50%] fixed right-0 top-0 navigation-animation"></div>
-                    <nav className="p-2 flex flex-row items-center rounded-full gap-4 bg-op-white-10">
+                    <div className="bg-white w-[80px] h-[80px] rounded-[50%] fixed right-0 top-0 navigation-animation"></div>
+                    <nav className="p-2 flex flex-row items-center rounded-full gap-4 bg-op-white-10 relative z-10">
                         <ul className="flex flex-row items-center">
                             <li className="op-nav-item"><a href="" className="inline-block rounded-full px-5 py-2 transition duration-500 transition-discrete hover:bg-op-green text-white hover:text-op-darkBlue font-medium leading-none">About</a></li>
                             <li className="op-nav-item"><a href="" className="inline-block rounded-full px-5 py-2 transition duration-500 transition-discrete hover:bg-op-green text-white hover:text-op-darkBlue font-medium leading-none">Work</a></li>
