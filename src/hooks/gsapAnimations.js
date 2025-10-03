@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
  * @param {number} delay - duration
  * @param {HTMLElement} - gsap.context scope element
  */
-export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope, nextAnim) => {
+export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) => {
     const ctx = gsap.context(() => {
         const tl = gsap.timeline({ delay: 1 });
         const split = new SplitText(target, { type: "chars" });
@@ -207,12 +207,21 @@ export const fadeDownHeader = (target, delay = 5) => {
 /**
  * Scrambling Text
  * @param {string} target - Selector of the element
- * @param {number} delay - Duration
+ * @param {number} speed - Duration
  * @param {HTMLElement} scope - gsap.context scope element
- * @param {string} textValue - Text in output
  */
-export const scramblingText = (target, speed = 2, scope, textValue) => {
-
+export const navigationAnimation = (target, speed = 2, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.set(target, {
+            scale: 0,
+        });
+        gsap.to(target, {
+            scale: 70,
+            duration: speed,
+            ease: "linear",
+        });
+    }, scope);
+    return () => ctx.revert();
 }
 
 /**
