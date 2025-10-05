@@ -141,18 +141,15 @@ export const MovingGlowAnimation = (target, delay = 1, scope) => {
                 trigger: target,          // element that activates animation
                 start: "bottom bottom",      // when top of target hits bottom of viewport
                 end: "bottom top",        // when bottom of target hits top of viewport
-                scrub: true,              // smooth scrubbing instead of repeat
+                scrub: 0.3,              // smooth scrubbing instead of repeat
                 markers: false,           // set to true for debugging
             },
         });
 
         // Initial state
         gsap.set(target, {
-            opacity: 0,
-            x: 0,
-            y: 0,
-            background:
-                "linear-gradient(135deg, rgb(6 195 237) 80%, rgba(0, 0, 0, 0) 100%)",
+            opacity: 0.4,
+            background: "linear-gradient(135deg, rgb(6 195 237) 80%, rgba(0, 0, 0, 0) 100%)",
         });
 
         // Timeline sequence (scrubbed on scroll)
@@ -215,6 +212,58 @@ export const fadeDownHeader = (target, delay = 5) => {
     return () => ctx.revert();
 };
 
+export const navigationVisible = (target, speed, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.fromTo(target, {
+            autoAlpha: 0,
+        },
+            {
+                autoAlpha: 1,
+                duration: speed,
+                ease: "none"
+            }
+        )
+    }, scope);
+}
+
+export const navigationInVisible = (target, speed, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.fromTo(target, {
+            autoAlpha: 1,
+        }, {
+            autoAlpha: 0,
+            duration: speed,
+            ease: "none",
+        })
+    }, scope);
+}
+
+export const mainNavigationVisible = (target, speed, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.fromTo(target, {
+            autoAlpha: 0,
+        },
+            {
+                autoAlpha: 1,
+                duration: speed,
+                delay: 0.5,
+                ease: "none"
+            }
+        )
+    }, scope);
+}
+
+export const mainNavigationInVisible = (target, speed, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.fromTo(target, {
+            autoAlpha: 1,
+        }, {
+            autoAlpha: 0,
+            duration: speed,
+            ease: "none",
+        })
+    }, scope);
+}
 
 /**
  * Scrambling Text
@@ -222,7 +271,7 @@ export const fadeDownHeader = (target, delay = 5) => {
  * @param {number} speed - Duration
  * @param {HTMLElement} scope - gsap.context scope element
  */
-export const navigationAnimation = (target, speed = 2, scope) => {
+export const navigationBGVisible = (target, speed = 2, scope) => {
     const ctx = gsap.context(() => {
         gsap.to(target, {
             scale: 60,
@@ -239,7 +288,7 @@ export const navigationAnimation = (target, speed = 2, scope) => {
  * @param {number} speed - Duration
  * @param {HTMLElement} scope - gsap.context scope element
  */
-export const navigationCloseAnimation = (target, speed = 2, scope) => {
+export const navigationBGInVisible = (target, speed = 2, scope) => {
     const ctx = gsap.context(() => {
         gsap.to(target, {
             scale: 0,
@@ -249,6 +298,48 @@ export const navigationCloseAnimation = (target, speed = 2, scope) => {
     }, scope);
     return () => ctx.revert();
 }
+
+export const closeButtonVisible = (target, speed = 2, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.fromTo(target, {
+            autoAlpha: 0,
+            scale: 0,
+        },
+            {
+                autoAlpha: 1,
+                scale: 1,
+                duration: speed,
+                ease: "power2.out"
+            })
+    }, scope);
+}
+
+export const closeButtonInVisible = (target, speed = 2, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.fromTo(target, {
+            autoAlpha: 1,
+            scale: 1,
+        }, {
+            autoAlpha: 0,
+            scale: 0,
+            duration: speed,
+            ease: "power2.out",
+        })
+    }, scope);
+}
+
+export const RotateButton = (target, speed = 2, scope) => {
+    const ctx = gsap.context(() => {
+        gsap.to(target, {
+            rotate: 360,        // keep adding rotation
+            duration: 5,              // seconds per full spin
+            ease: "linear",           // constant speed
+            repeat: -1,               // infinite
+            transformOrigin: "50% 50%" // rotate around center
+        });
+    }, scope);
+}
+
 
 /**
  * Banner Box Animation (Increase width on scroll)
