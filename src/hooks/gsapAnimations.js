@@ -16,17 +16,19 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) =>
         const split = new SplitText(target, { type: "chars" });
 
         tl.fromTo(split.chars,
-            { rotateY: 75, y: 0, opacity: 0, transformOrigin: "0% 50%" },
+            { y: "-90px", opacity: 0, transformOrigin: "0% 50%" },
             {
-                rotateY: 0,
-                y: 30,
+                y: 0,
                 opacity: 1,
                 duration: delay,
-                ease: "elastic.out(1,0.3)",
-                stagger: 0.10,
+                ease: "back.out(2)",
+                stagger: {
+                    each: 0.05,
+                    from: "center",
+                },
                 onComplete: () => {
                     tl.to(target, {
-                        scale: 1.3,
+                        scale: .8,
                         transformOrigin: "0% 50%",
                         duration: 9,
                         delay: 9,
@@ -49,6 +51,30 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) =>
     }, scope);
     return () => ctx.revert();
 };
+
+export const bannerVideoEffect = (videoSelector, sectionTrigger, scope) => {
+    const ctx = gsap.context(() => {
+        const video = document.querySelector(videoSelector);
+        if (!video) return;
+
+        // Wait until video metadata is loaded
+        video.addEventListener("loadedmetadata", () => {
+            gsap.to(video, {
+                currentTime: video.duration, // scrub from 0s → end
+                ease: "none",
+                scrollTrigger: {
+                    trigger: sectionTrigger,
+                    start: "top top",
+                    end: "bottom+=1000 top", // adjust scroll distance
+                    scrub: 1,             // sync with scroll
+                }
+            });
+        });
+    }, scope);
+
+    return () => ctx.revert();
+};
+
 
 /**
  * Welcome Tagline Animation
@@ -108,46 +134,32 @@ export const headingScrollMotion = (target, delay = 2, scope) => {
  * @param {number} delay - duration
  * @param {HTMLElement} scope - gsap.context scope element
  */
-export const MovingGlowAnimation = (target, delay = 0, scope) => {
+export const MovingGlowAnimation = (target, delay = 1, scope) => {
     const ctx = gsap.context(() => {
-        let tl = gsap.timeline({ repeat: -1, yoyo: true, delay: 2.5 });
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: target,          // element that activates animation
+                start: "bottom bottom",      // when top of target hits bottom of viewport
+                end: "bottom top",        // when bottom of target hits top of viewport
+                scrub: true,              // smooth scrubbing instead of repeat
+                markers: false,           // set to true for debugging
+            },
+        });
 
         // Initial state
         gsap.set(target, {
             opacity: 0,
             x: 0,
             y: 0,
-            background: "linear-gradient(135deg, rgba(25,173,206,1) 80%, rgba(0,0,0,0) 100%)",
+            background:
+                "linear-gradient(135deg, rgb(6 195 237) 80%, rgba(0, 0, 0, 0) 100%)",
         });
 
+        // Timeline sequence (scrubbed on scroll)
         tl.to(target, {
             opacity: 1,
             duration: 1,
         })
-            .to(target, {
-                opacity: 0.5,
-                x: -200,
-                y: -400,
-                background: "linear-gradient(135deg, rgba(25,148,206,1) 80%, rgba(0,0,0,0) 100%)",
-                duration: delay,
-                ease: "linear",
-            })
-            .to(target, {
-                opacity: 0.75,
-                x: 0,
-                y: -200,
-                background: "linear-gradient(135deg, rgba(125,25,206,1) 80%, rgba(0,0,0,0) 100%)",
-                duration: delay,
-                ease: "linear",
-            })
-            .to(target, {
-                opacity: 1,
-                x: 0,
-                y: 0,
-                background: "linear-gradient(135deg, rgba(25,173,206,1) 80%, rgba(0,0,0,0) 100%)",
-                duration: delay,
-                ease: "linear",
-            });
     }, scope);
 
     return () => ctx.revert();
@@ -169,7 +181,7 @@ export const scrollToExplore = (target, delay = 2) => {
         tl.to(split.chars, {
             opacity: 1,
             duration: 2,
-            ease: "power2.out",
+            ease: "back.out(2)",
             stagger: {
                 each: 0.1,
                 repeat: 1,
@@ -231,25 +243,6 @@ export const navigationCloseAnimation = (target, speed = 2, scope) => {
     const ctx = gsap.context(() => {
         gsap.to(target, {
             scale: 0,
-            duration: speed,
-            ease: "linear",
-        });
-    }, scope);
-    return () => ctx.revert();
-}
-
-
-/**
- * Scrambling Text
- * @param {string} target - Selector of the element
- * @param {number} speed - Duration
- * @param {HTMLElement} scope - gsap.context scope element
- */
-export const mouseOverEffect = (target, speed = 2, scope) => {
-    const ctx = gsap.context(() => {
-        gsap.to(target, {
-            color: "#000000",
-            backgroundColor: "#fff",
             duration: speed,
             ease: "linear",
         });
