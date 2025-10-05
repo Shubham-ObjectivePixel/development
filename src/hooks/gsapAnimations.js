@@ -197,7 +197,7 @@ export const scrollToExplore = (target, delay = 2) => {
  * @param {number} delay - Duration
  * @param {HTMLElement} scope - gsap.context scope element
  */
-export const fadeDownHeader = (target, delay = 5) => {
+export const fadeDownHeader = (target, delay = 3) => {
     const ctx = gsap.context(() => {
         gsap.set(target, {
             y: '-100%',
