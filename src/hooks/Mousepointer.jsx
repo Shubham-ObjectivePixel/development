@@ -11,8 +11,8 @@ const Mousepointer = () => {
             yp = 0;
 
         const handleMouseMove = (e) => {
-            mouseX = e.clientX; // <-- stays relative to viewport
-            mouseY = e.clientY; // <-- no scroll shift
+            mouseX = e.clientX;
+            mouseY = e.clientY;
         }; 1
 
         const animate = () => {

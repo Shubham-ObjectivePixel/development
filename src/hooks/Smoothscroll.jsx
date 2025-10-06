@@ -4,10 +4,10 @@ import Lenis from "lenis";
 const SmoothScroll = () => {
     useEffect(() => {
         const lenis = new Lenis({
-            duration: 1.5, // same as your code
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // smooth easing
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             smoothWheel: true,
-            smoothTouch: true, // disable touch smooth scroll (optional)
+            smoothTouch: true,
         });
 
         const raf = (time) => {

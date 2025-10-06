@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { fadeDownHeader } from "../../hooks/gsapAnimations";
 
 import Logo from "../ui/Logo"
-import Navigation from "../layouts/Navigation"
+import Navigation from "../ui/Navigation"
 import Tagline from "../ui/Tagline"
 
 const Header = () => {

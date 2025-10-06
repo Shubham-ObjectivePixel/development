@@ -52,30 +52,6 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) =>
     return () => ctx.revert();
 };
 
-export const bannerVideoEffect = (videoSelector, sectionTrigger, scope) => {
-    const ctx = gsap.context(() => {
-        const video = document.querySelector(videoSelector);
-        if (!video) return;
-
-        // Wait until video metadata is loaded
-        video.addEventListener("loadedmetadata", () => {
-            gsap.to(video, {
-                currentTime: video.duration, // scrub from 0s → end
-                ease: "none",
-                scrollTrigger: {
-                    trigger: sectionTrigger,
-                    start: "top top",
-                    end: "bottom+=1000 top", // adjust scroll distance
-                    scrub: 1,             // sync with scroll
-                }
-            });
-        });
-    }, scope);
-
-    return () => ctx.revert();
-};
-
-
 /**
  * Welcome Tagline Animation
  * @param {string} target - selector of the heading
@@ -265,12 +241,6 @@ export const mainNavigationInVisible = (target, speed, scope) => {
     }, scope);
 }
 
-/**
- * Scrambling Text
- * @param {string} target - Selector of the element
- * @param {number} speed - Duration
- * @param {HTMLElement} scope - gsap.context scope element
- */
 export const navigationBGVisible = (target, speed = 2, scope) => {
     const ctx = gsap.context(() => {
         gsap.to(target, {
@@ -282,12 +252,6 @@ export const navigationBGVisible = (target, speed = 2, scope) => {
     return () => ctx.revert();
 }
 
-/**
- * Scrambling Text
- * @param {string} target - Selector of the element
- * @param {number} speed - Duration
- * @param {HTMLElement} scope - gsap.context scope element
- */
 export const navigationBGInVisible = (target, speed = 2, scope) => {
     const ctx = gsap.context(() => {
         gsap.to(target, {
