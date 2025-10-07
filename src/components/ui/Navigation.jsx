@@ -45,9 +45,9 @@ const Navigation = () => {
                         <div className="main-navigation h-screen w-[89%] pl-[8vw] invisible">
                             <nav className="flex flex-col h-full justify-center">
                                 <ul className="flex flex-col gap-[4vw] justify-between h-[70%]">
-                                    <li className="op-nav-item"><a href="" className="text-stroke uppercase text-op-white-25 hover:text-white font-makizlo-font text-[8vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">About</a></li>
-                                    <li className="op-nav-item"><a href="" className="text-stroke uppercase text-op-white-25 hover:text-white font-makizlo-font text-[8vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">Work</a></li>
-                                    <li className="op-nav-item"><a href="" className="text-stroke uppercase text-op-white-25 hover:text-white font-makizlo-font text-[8vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">Contact</a></li>
+                                    <li className="op-nav-item"><a href="/about" className="text-stroke uppercase text-op-white-25 hover:text-white font-makizlo-font text-[8vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">About</a></li>
+                                    <li className="op-nav-item"><a href="/work" className="text-stroke uppercase text-op-white-25 hover:text-white font-makizlo-font text-[8vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">Work</a></li>
+                                    <li className="op-nav-item"><a href="/contact" className="text-stroke uppercase text-op-white-25 hover:text-white font-makizlo-font text-[8vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>

@@ -36,8 +36,8 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) =>
                         scrollTrigger: {
                             trigger: sectionTrigger,
                             markers: false,
-                            start: "bottom bottom",
-                            end: "+=80% bottom",
+                            start: "center center",
+                            end: "+=80% 70%",
                             pin: true,
                             pinSpacing: true,
                             pinSpacer: 20,
@@ -112,27 +112,57 @@ export const headingScrollMotion = (target, delay = 2, scope) => {
  */
 export const MovingGlowAnimation = (target, delay = 1, scope) => {
     const ctx = gsap.context(() => {
+        // let tl = gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: target,          // element that activates animation
+        //         start: "center 20%",      // when top of target hits bottom of viewport
+        //         end: "bottom top",        // when bottom of target hits top of viewport
+        //         scrub: 0.3,              // smooth scrubbing instead of repeat
+        //         markers: true,           // set to true for debugging
+        //     },
+        // });
+
+        // // Initial state
+        // gsap.set(target, {
+        //     opacity: 0.4,
+        //     background: "linear-gradient(135deg, rgb(6 195 237) 80%, rgba(0, 0, 0, 0) 100%)",
+        // });
+
+        // // Timeline sequence (scrubbed on scroll)
+        // tl.to(target, {
+        //     opacity: 0.6,
+        //     duration: 1,
+        // })
+
+        const coolVideo = document.querySelector(target);
+
         let tl = gsap.timeline({
             scrollTrigger: {
-                trigger: target,          // element that activates animation
-                start: "bottom bottom",      // when top of target hits bottom of viewport
-                end: "bottom top",        // when bottom of target hits top of viewport
-                scrub: 0.3,              // smooth scrubbing instead of repeat
-                markers: false,           // set to true for debugging
-            },
+                trigger: target,
+                start: "top top",
+                end: "bottom+=60% bottom",
+                scrub: 0.5,
+                markers: true
+            }
         });
 
-        // Initial state
-        gsap.set(target, {
-            opacity: 0.4,
-            background: "linear-gradient(135deg, rgb(6 195 237) 80%, rgba(0, 0, 0, 0) 100%)",
-        });
+        coolVideo.onloadedmetadata = function () {
+            tl.to(coolVideo, { currentTime: coolVideo.duration });
+        };
 
-        // Timeline sequence (scrubbed on scroll)
-        tl.to(target, {
-            opacity: 1,
-            duration: 1,
-        })
+        function isTouchDevice() {
+            return (
+                "ontouchstart" in window ||
+                navigator.maxTouchPoints > 0 ||
+                navigator.msMaxTouchPoints > 0
+            );
+        }
+        if (isTouchDevice()) {
+            coolVideo.play();
+            coolVideo.pause();
+        }
+
+
     }, scope);
 
     return () => ctx.revert();

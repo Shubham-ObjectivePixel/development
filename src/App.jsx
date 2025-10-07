@@ -7,15 +7,18 @@ import NotFoundPage from './pages/NotFound';
 
 const App = () => {
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/work" element={<WorkPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-            </Routes>
-        </Router>
+        <>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/work" element={<WorkPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="*" element={<NotFoundPage />} />
+                </Routes>
+            </Router>
+
+        </>
     )
 }
 
