@@ -1,3 +1,5 @@
+import Cards from "../ui/Cards";
+
 const ProjectsSection = () => {
     return (
         <>
@@ -7,13 +9,14 @@ const ProjectsSection = () => {
                     Lorem Ipsum
                 </h2>
                 <div className="relative z-10">
-                    <div className="bg-op-white-4 rounded-xl p-[50px] w-[500px] h-[500px] backdrop-blur-[22px]">
-                        <img src="../src/assets/images/demo.jpg" alt="" />
+                    <div className="flex justify-between gap-3">
+                        <Cards />
+                        <Cards />
+                        <Cards />
                     </div>
                 </div>
             </section>
         </>
     )
 }
-
 export default ProjectsSection
