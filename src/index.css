@@ -7,6 +7,7 @@
     --color-op-white: rgb(255 255 255);
     --color-op-white-25: rgb(255 255 255 / 25%);
     --color-op-white-10: rgb(255 255 255 / 10%);
+    --color-op-white-4: rgb(255 255 255 / 4%);
     --color-op-transparent: rgb(255 255 255 / 0%);
     --text-shadow-op-shadow: 0 0 59px #0000004f;
     --font-makizlo-font: 'Makizlo';
