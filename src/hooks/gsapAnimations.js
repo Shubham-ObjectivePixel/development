@@ -140,29 +140,8 @@ export const headingScrollMotion = (target, delay = 2, scope) => {
  * @param {number} delay - duration
  * @param {HTMLElement} scope - gsap.context scope element
  */
-export const MovingGlowAnimation = (target, delay = 1, scope) => {
+export const VideoPlayOnScroll = (target, delay = 1, scope) => {
     const ctx = gsap.context(() => {
-        // let tl = gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: target,          // element that activates animation
-        //         start: "center 20%",      // when top of target hits bottom of viewport
-        //         end: "bottom top",        // when bottom of target hits top of viewport
-        //         scrub: 0.3,              // smooth scrubbing instead of repeat
-        //         markers: true,           // set to true for debugging
-        //     },
-        // });
-
-        // // Initial state
-        // gsap.set(target, {
-        //     opacity: 0.4,
-        //     background: "linear-gradient(135deg, rgb(6 195 237) 80%, rgba(0, 0, 0, 0) 100%)",
-        // });
-
-        // // Timeline sequence (scrubbed on scroll)
-        // tl.to(target, {
-        //     opacity: 0.6,
-        //     duration: 1,
-        // })
 
         const coolVideo = document.querySelector(target);
 

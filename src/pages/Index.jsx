@@ -9,9 +9,10 @@ const HomePage = () => {
         <>
             <Header />
             <main>
-
-                <BannerSection />
+                {/* <BannerSection /> */}
+                <div className="h-screen"></div>
                 <ProjectsSection />
+                <div className="h-screen"></div>
             </main>
             <Footer />
         </>
