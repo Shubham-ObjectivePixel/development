@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef } from "react";
+import GlowingLight from "../ui/GlowingLight";
 import { bannerHeadingEffect, bannerTextEffect } from "../../hooks/gsapAnimations";
 
 const BannerSection = () => {
@@ -19,7 +20,8 @@ const BannerSection = () => {
 
     return (
         <>
-            <section id="op-banner-section" ref={el} className="relative px-24">
+            <section id="op-banner-section" ref={el} className="relative px-24 bg-op-darkBlue overflow-hidden">
+                <GlowingLight />
                 <div className="flex flex-wrap items-center content-center h-screen gap-8">
                     <h1 className="text-white text-[12vw] w-full leading-[normal] text-left relative z-10 branding-fade">
                         Objective<span className="text-op-green">Pixel</span>

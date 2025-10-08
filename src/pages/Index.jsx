@@ -1,17 +1,16 @@
 import Header from "../components/layouts/Header"
 import Footer from "../components/layouts/Footer"
 
-import GlowingLight from "../components/ui/GlowingLight";
 import BannerSection from "../components/ui/BannerSection";
 import ProjectsSection from "../components/ui/ProjectsSection";
 
 const HomePage = () => {
     return (
         <>
-            {/* <Header /> */}
+            <Header />
             <main>
-                {/* <GlowingLight /> */}
-                {/* <BannerSection /> */}
+
+                <BannerSection />
                 <ProjectsSection />
             </main>
             <Footer />

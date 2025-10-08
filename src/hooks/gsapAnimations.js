@@ -35,14 +35,13 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) =>
                         ease: "linear",
                         scrollTrigger: {
                             trigger: sectionTrigger,
-                            markers: false,
+                            markers: true,
                             start: "center center",
-                            end: "+=80% 70%",
+                            end: "+=80% 73%",
                             pin: true,
-                            pinSpacing: true,
+                            pinSpacing: false,
                             pinSpacer: 20,
                             scrub: 1,
-                            anticipatePin: 1,
                         }
                     });
                 }
@@ -51,6 +50,37 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) =>
     }, scope);
     return () => ctx.revert();
 };
+// export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) => {
+//     const ctx = gsap.context(() => {
+//         const split = new SplitText(target, { type: "chars" });
+
+//         // Text intro animation
+//         gsap.fromTo(split.chars,
+//             { y: "-90px", opacity: 0, transformOrigin: "0% 50%" },
+//             {
+//                 y: 0,
+//                 opacity: 1,
+//                 duration: delay,
+//                 ease: "back.out(2)",
+//                 stagger: { each: 0.05, from: "center" },
+//             }
+//         );
+
+//         // ScrollTrigger for banner pin
+//         ScrollTrigger.create({
+//             trigger: sectionTrigger,
+//             start: "top top",
+//             end: "bottom top",
+//             pin: true,
+//             pinSpacing: false, // <– allows overlay of next section
+//             pinSpacer: 20,
+//             scrub: true,
+//             markers: false,
+//         });
+//     }, scope);
+
+//     return () => ctx.revert();
+// };
 
 /**
  * Welcome Tagline Animation
@@ -141,8 +171,8 @@ export const MovingGlowAnimation = (target, delay = 1, scope) => {
                 trigger: target,
                 start: "top top",
                 end: "bottom+=60% bottom",
-                scrub: 0.5,
-                markers: true
+                scrub: 0.8,
+                markers: false
             }
         });
 
