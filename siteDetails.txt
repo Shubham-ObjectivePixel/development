@@ -58,8 +58,8 @@ Let’s Build Something That Stands Out
 button
 
 Footer
-
-
+<title>Objective Pixel - Creative Web Solutions</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 
 --> About
 Hi, I’m Shubham, the face behind Objective Pixel. What looks like a brand is really my one-man mission fueled by passion, creativity, and experience.
