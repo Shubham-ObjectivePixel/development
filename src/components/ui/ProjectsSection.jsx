@@ -4,7 +4,7 @@ import { useHeaderContext } from "../context/HeaderContext";
 const ProjectsSection = () => {
     const { setActiveSection } = useHeaderContext();
     const sectionRef = useRef(null);
-    const sectionId = "projects"; // Unique ID for this section
+    const sectionId = "projects";
 
     useEffect(() => {
         const section = sectionRef.current;
@@ -33,18 +33,11 @@ const ProjectsSection = () => {
     }, [setActiveSection, sectionId]);
 
     return (
-        <section
-            ref={sectionRef}
-            id={sectionId}
-            data-bg-type="white"
-            className="h-[200vh] relative z-10 rounded-xl bg-white"
-        >
-            <h2 className="section-title-effect text-white uppercase text-[10vw] text-center leading-normal">
-                Work
-            </h2>
+        <section ref={sectionRef} id={sectionId} data-bg-type="white" className="h-[200vh] relative z-10 rounded-xl bg-white">
+            <h2 className="section-title-effect text-white uppercase text-[10vw] text-center leading-normal"> Work </h2>
             <div className="relative z-10 pt-[8.5vw]">
                 <div className="flex justify-between gap-3">
-                    {/* Cards component */}
+                    
                 </div>
             </div>
         </section>

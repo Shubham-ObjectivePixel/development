@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const HeaderContext = createContext();
 
 export const HeaderProvider = ({ children }) => {
-    const [activeSection, setActiveSection] = useState(null); // Track active section
+    const [activeSection, setActiveSection] = useState(null);
     return (
         <HeaderContext.Provider value={{ activeSection, setActiveSection }}>
             {children}
