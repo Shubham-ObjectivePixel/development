@@ -13,6 +13,8 @@ const HomePage = () => {
                 <div className="h-screen"></div>
                 <ProjectsSection />
                 <div className="h-screen"></div>
+                <div className="h-screen"></div>
+                <div className="h-screen"></div>
             </main>
             <Footer />
         </>

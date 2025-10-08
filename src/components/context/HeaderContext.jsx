@@ -3,9 +3,9 @@ import { createContext, useContext, useState } from "react";
 const HeaderContext = createContext();
 
 export const HeaderProvider = ({ children }) => {
-    const [isWhite, setIsWhite] = useState(false);
+    const [activeSection, setActiveSection] = useState(null); // Track active section
     return (
-        <HeaderContext.Provider value={{ isWhite, setIsWhite }}>
+        <HeaderContext.Provider value={{ activeSection, setActiveSection }}>
             {children}
         </HeaderContext.Provider>
     );
