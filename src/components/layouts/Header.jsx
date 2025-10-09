@@ -20,9 +20,9 @@ const Header = () => {
         >
             <div className="container">
                 <div className="flex flex-wrap flex-row justify-between items-center">
-                    <Logo></Logo>
+                    {/* <Logo></Logo>
                     <Tagline></Tagline>
-                    <Navigation></Navigation>
+                    <Navigation></Navigation> */}
                 </div>
             </div>
         </header>
