@@ -35,7 +35,7 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) =>
                         ease: "linear",
                         scrollTrigger: {
                             trigger: sectionTrigger,
-                            markers: true,
+                            markers: false,
                             start: "center center",
                             end: "+=80% 73%",
                             pin: true,

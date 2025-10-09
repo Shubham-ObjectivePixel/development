@@ -1,7 +1,11 @@
 import { useEffect } from "react"
 import { scrollToExplore } from "../../hooks/gsapAnimations"
 
+import { useHeaderContext } from "../context/HeaderContext";
+
 const ScrollToExplore = () => {
+
+    const { activeSection } = useHeaderContext();
 
     useEffect(() => {
         scrollToExplore(".scroll-to-explore", 1);
@@ -10,7 +14,7 @@ const ScrollToExplore = () => {
     return (
         <>
             <div className="fixed z-20 bottom-4 right-4">
-                <p className="text-white uppercase text-xs tracking-widest scroll-to-explore">scroll to explore</p>
+                <p className={`uppercase text-xs tracking-widest scroll-to-explore transition duration-700 ease-in-out ${activeSection === "projects" ? "text-op-darkblue" : "text-white"}`}>scroll to explore</p>
             </div>
         </>
     )

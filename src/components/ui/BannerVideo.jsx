@@ -13,7 +13,7 @@ const BannerVideo = () => {
     }, []);
 
     return (
-        <video ref={elRef} className="video fixed top-0 left-0 w-screen h-screen mix-blend-overlay scale-x-[1.2] scale-y-[1.009]" playsInline={true} webkit-playsinline="true" preload="auto" muted="muted">
+        <video ref={elRef} className="video fixed top-0 left-0 w-screen h-screen mix-blend-overlay scale-x-[1.2] scale-y-[1.009] object-cover" playsInline={true} webkit-playsinline="true" preload="auto" muted="muted">
             <source src="../src/assets/Video/white-waves-2.mp4" type="video/mp4" />
         </video>
     )
