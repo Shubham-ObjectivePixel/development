@@ -29,7 +29,6 @@ body: Manrope;
 
 /* Site Ideas */
 https://wearesmall.es/en
-https://wearesmall.es/en
 https://www.vertica.dk/
 https://veronicazubakova.com/
 https://rootwebdesign.studio/
