@@ -14,7 +14,7 @@ Directly Contact to my for the Website,
 Home:
 About:
 Works:
-  Single Works:
+-Single Works:
 Contact:
 
 /* Color I like on the site */
