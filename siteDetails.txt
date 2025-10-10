@@ -18,10 +18,10 @@ Works:
 Contact:
 
 /* Color I like on the site */
-Primary: #0d1827
-Secondary: #A8E02D;
-accent: #A8E02D
-neutral: White/Black/LightGray
+Primary: #11100e;
+Secondary: #f4eadc;
+Accent: #A8E02D;
+neutral: White/Black
 
 /* Typography I like on the site */
 Heading: Makizlo

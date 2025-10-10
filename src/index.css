@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-    --color-op-darkBlue: #021227;
-    --color-op-navyBlue: #000f22;
+    --color-op-darkBlue: #11100e;
+    --color-op-navyBlue: #11100e;
     --color-op-green: #A8E02D;
+    --color-op-gradient: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(168, 224, 45, 1) 51%);
     --color-op-white: rgb(255 255 255);
     --color-op-white-25: rgb(255 255 255 / 25%);
     --color-op-white-10: rgb(255 255 255 / 10%);
     --color-op-white-4: rgb(255 255 255 / 4%);
     --color-op-transparent: rgb(255 255 255 / 0%);
     --text-shadow-op-shadow: 0 0 59px #0000004f;
-    --font-makizlo-font: 'Makizlo';
+    --font-makizlo-font: 'Anthelion';
 }
 
 @font-face {
@@ -21,6 +22,18 @@
         url('assets/fonts/Makizlo/MakizloRegular.woff') format('woff'),
         url('assets/fonts/Makizlo/MakizloRegular.ttf') format('truetype'),
         url('assets/fonts/Makizlo/MakizloRegular.svg#MakizloRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Anthelion';
+    src: url('assets/fonts/Anthelion/Anthelion.eot');
+    src: url('assets/fonts/Anthelion/Anthelion.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/Anthelion/Anthelion.woff2') format('woff2'),
+        url('assets/fonts/Anthelion/Anthelion.woff') format('woff'),
+        url('assets/fonts/Anthelion/Anthelion.ttf') format('truetype'),
+        url('assets/fonts/Anthelion/Anthelion.svg#Anthelion') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -37,7 +50,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Makizlo', serif;
+    font-family: 'Anthelion', serif;
 }
 
 .container {
