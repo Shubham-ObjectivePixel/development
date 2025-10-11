@@ -408,3 +408,42 @@ export const bannerImageAnimation = (target, sectionTrigger, delay = 2, scope) =
 
     return () => ctx.revert();
 };
+
+
+
+/**
+ * Sections heading animations
+ * @param {string} target - selector of the element to animate
+ * @param {string} sectionTrigger - Section trigger
+ * @param {number} delay - animation duration
+ * @param {HTMLElement} scope - gsap.context scope element
+ */
+export const sectionTitleAnimation = (target, sectionTrigger, delay = 2, scope) => {
+    const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+            delay: delay,
+            scrollTrigger: {
+                trigger: sectionTrigger,
+                start: "top 50%",
+                end: "bottom bottom",
+                scrub: 1,
+                pin: false,
+                markers: false,
+            }
+        });
+
+        const split = new SplitText(target, { type: "words" });
+
+        tl.fromTo(split.words, {
+            opacity: 0.02,
+            duration: 0.9,
+        }, {
+            opacity: 1,
+            stagger: {
+                    each: 0.8,
+                    from: "start",
+                }
+        });
+
+    }, scope);
+};
