@@ -13,7 +13,7 @@ const ScrollToExplore = () => {
 
     return (
         <>
-            <div className="fixed z-20 bottom-4 right-4">
+            <div className="fixed z-10 bottom-4 left-4">
                 <p className={`uppercase text-xs tracking-widest scroll-to-explore transition duration-700 ease-in-out ${activeSection === "projects" ? "text-op-darkblue" : "text-white"}`}>scroll to explore</p>
             </div>
         </>

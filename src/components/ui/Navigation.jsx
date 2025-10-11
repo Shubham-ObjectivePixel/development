@@ -27,9 +27,9 @@ const Navigation = () => {
     return (
         <>
             <div ref={el} className="w-[33%] flex flex-wrap justify-end relative">
-                <div onClick={navigationHandlerOpen} className="w-[60%] text-white border-none md:border-solid border-b border-op-white-25 py-3 px-4 navigation-section cursor-pointer transition duration-700 ease-in-out hover:bg-white hover:text-op-darkBlue">
-                    <div className="flex flex-wrap md:justify-between justify-end items-center">
-                        <span className="uppercase text-sm tracking-widest md:block hidden">Vision</span>
+                <div onClick={navigationHandlerOpen} className="lg:w-[60%] w-[100%] text-white border-none sm:border-solid border-b border-op-white-25 py-3 px-4 navigation-section cursor-pointer transition duration-700 ease-in-out hover:bg-white hover:text-op-darkBlue">
+                    <div className="flex flex-wrap sm:justify-between justify-end items-center">
+                        <span className="uppercase text-sm tracking-widest sm:block hidden">Vision</span>
                         <TbGridDots className="w-[25px] h-[25px]" />
                     </div>
                 </div>

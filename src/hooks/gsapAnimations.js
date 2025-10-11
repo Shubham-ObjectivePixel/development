@@ -150,7 +150,7 @@ export const VideoPlayOnScroll = (target, delay = 1, scope) => {
                 trigger: target,
                 start: "top top",
                 end: "bottom+=60% bottom",
-                scrub: 0.8,
+                scrub: 0.1,
                 markers: false
             }
         });

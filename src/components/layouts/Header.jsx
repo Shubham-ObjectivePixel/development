@@ -15,9 +15,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header
-            className={`p-4 fixed w-full top-0 backdrop-blur-[4px] z-20 fade-down header-style ${activeSection === "projects" ? "white-bg" : ""}`}
-        >
+        <header className={`p-4 fixed w-full top-0 backdrop-blur-[4px] z-20 fade-down header-style ${activeSection === "projects" ? "white-bg" : ""}`}>
             <div className="container">
                 <div className="flex flex-wrap flex-row justify-between items-center">
                     <Logo></Logo>
