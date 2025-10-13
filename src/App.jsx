@@ -4,21 +4,19 @@ import AboutPage from './pages/About';
 import WorkPage from './pages/Work';
 import ContactPage from './pages/Contact';
 import NotFoundPage from './pages/NotFound';
-import { HeaderProvider } from "./components/context/HeaderContext";
+// import { HeaderProvider } from "./components/context/HeaderContext";
 
 const App = () => {
     return (
         <>
             <Router>
-                <HeaderProvider>
-                    <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/work" element={<WorkPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="*" element={<NotFoundPage />} />
-                    </Routes>
-                </HeaderProvider>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/work" element={<WorkPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="*" element={<NotFoundPage />} />
+                </Routes>
             </Router>
         </>
     )
