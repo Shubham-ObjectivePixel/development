@@ -19,7 +19,7 @@ Contact:
 
 /* Color I like on the site */
 Primary: rgba(24, 22, 19, 1);
-Secondary: rgba(244, 234, 220, 1);
+Secondary: #f4eadcff;
 Accent: rgba(168, 224, 45, 1);
 neutral: White/Black
 rgba(0, 0, 0, 0.30)

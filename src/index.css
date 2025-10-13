@@ -14,8 +14,8 @@
 }
 
 @theme {
-    --color-primaryColor: rgba(24, 22, 19, 1);
-    --color-secondaryColor: rgba(244, 234, 220, 1);
+    --color-primaryColor: #171717;/*rgba(24, 22, 19, 1)*/;
+    --color-secondaryColor: #f8f1e7/*rgba(244, 234, 220, 1)*/;
     --color-acentColor: rgba(168, 224, 45, 1);
     --color-gradientColor: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(168, 224, 45, 1) 51%);
     --color-whiteColor: rgb(255 255 255 / 100%);
