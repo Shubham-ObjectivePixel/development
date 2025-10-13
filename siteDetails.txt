@@ -18,10 +18,11 @@ Works:
 Contact:
 
 /* Color I like on the site */
-Primary: #11100e;
-Secondary: #f4eadc;
-Accent: #A8E02D;
+Primary: rgba(24, 22, 19, 1);
+Secondary: rgba(244, 234, 220, 1);
+Accent: rgba(168, 224, 45, 1);
 neutral: White/Black
+rgba(0, 0, 0, 0.30)
 
 /* Typography I like on the site */
 Heading: Makizlo

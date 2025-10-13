@@ -1,31 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-    --color-op-darkBlue: #11100e;
-    --color-op-navyBlue: #11100e;
-    --color-op-green: #A8E02D;
-    --color-op-gradient: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(168, 224, 45, 1) 51%);
-    --color-op-white: rgb(255 255 255);
-    --color-op-white-25: rgb(255 255 255 / 25%);
-    --color-op-white-10: rgb(255 255 255 / 10%);
-    --color-op-white-4: rgb(255 255 255 / 4%);
-    --color-op-transparent: rgb(255 255 255 / 0%);
-    --text-shadow-op-shadow: 0 0 59px #0000004f;
-    --font-makizlo-font: 'Anthelion';
+    --color-primaryColor: rgba(24, 22, 19, 1);
+    --color-secondaryColor: rgba(244, 234, 220, 1);
+    --color-acentColor: rgba(168, 224, 45, 1);
+    --color-gradientColor: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(168, 224, 45, 1) 51%);
+    --color-whiteColor-25: rgb(255 255 255 / 25%);
+    --color-whiteColor-10: rgb(255 255 255 / 10%);
+    --color-whiteColor-4: rgb(255 255 255 / 4%);
+    --color-transparent: rgb(255 255 255 / 0%);
+    --color-textShadowColor: 0 0 59px rgba(0, 0, 0, 0.30);
+
+    --font-primaryFont: "Anthelion", sans-serif;
+    --font-secondaryFont: "Manrope", sans-serif;
+    
+    --width-container: 1920px;
 }
 
-@font-face {
-    font-family: 'Makizlo';
-    src: url('assets/fonts/Makizlo/MakizloRegular.eot');
-    src: url('assets/fonts/Makizlo/MakizloRegular.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/Makizlo/MakizloRegular.woff2') format('woff2'),
-        url('assets/fonts/Makizlo/MakizloRegular.woff') format('woff'),
-        url('assets/fonts/Makizlo/MakizloRegular.ttf') format('truetype'),
-        url('assets/fonts/Makizlo/MakizloRegular.svg#MakizloRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 @font-face {
     font-family: 'Anthelion';
     src: url('assets/fonts/Anthelion/Anthelion.eot');
@@ -39,92 +30,24 @@
     font-display: swap;
 }
 
-body {
-    font-weight: 200;
-    font-family: "Manrope", sans-serif;
-}
+body { font-weight: 200; font-family: var(--font-secondaryFont); }  
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Anthelion', serif;
-}
+h1, h2, h3, h4, h5, h6 {font-family: var(--font-primaryFont)}
 
-.container {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-}
+.container {max-width: var(--width-container)}
 
-body .cursor-element,
-body .cursor-element * {
-    pointer-events: none;
-}
+body .cursor-element, body .cursor-element * { pointer-events: none; }
 
-.op-bg-glow {
-    background: linear-gradient(135deg, #19adce 80%, #00000000 100%);
-    mix-blend-mode: screen;
-    filter: blur(300px);
-}
+body .cursor-element { position: fixed; width: 8px; height: 8px; border-radius: 100%; z-index: 99999; }
 
-body .cursor-element {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    z-index: 99999;
-}
+body .cursor-element span { position: fixed; border: 1px solid var(--color-op-white-25); border-radius: 100%; background: transparent; opacity: 0.7; width: 40px; height: 40px; display: block; z-index: 20; transition: 0.62s; transform: translateX(-50%) translateY(-50%); transform-origin: top left; transition-timing-function: cubic-bezier(0.19, 0.58, 0.58, 0.93); }
 
-body .cursor-element span {
-    position: fixed;
-    border: 1px solid var(--color-op-white-25);
-    border-radius: 100%;
-    background: transparent;
-    opacity: 0.7;
-    width: 40px;
-    height: 40px;
-    display: block;
-    z-index: 20;
-    transition: 0.62s;
-    transform: translateX(-50%) translateY(-50%);
-    transform-origin: top left;
-    transition-timing-function: cubic-bezier(0.19, 0.58, 0.58, 0.93);
-}
+body .cursor-element .cursor-glow { position: fixed; pointer-events: none; width: 100px; height: 100px; background: var(--color-op-white); border-radius: 100%; z-index: 10; opacity: 0; transform: scale(1) translateX(-50%) translateY(-50%); transform-origin: top left; filter: blur(32px); transition: all 0.64s, opacity 0.6s, width 0.68s, height 0.68s, left 0s, top 0s; transition-timing-function: cubic-bezier(0.19, 0.58, 0.58, 0.93); transition-delay: 0.2s; }
 
-body .cursor-element .cursor-glow {
-    position: fixed;
-    pointer-events: none;
-    width: 100px;
-    height: 100px;
-    background: var(--color-op-white);
-    border-radius: 100%;
-    z-index: 10;
-    opacity: 0;
-    transform: scale(1) translateX(-50%) translateY(-50%);
-    transform-origin: top left;
-    filter: blur(32px);
-    transition: all 0.64s, opacity 0.6s, width 0.68s, height 0.68s, left 0s, top 0s;
-    transition-timing-function: cubic-bezier(0.19, 0.58, 0.58, 0.93);
-    transition-delay: 0.2s;
-}
+body .cursor-element .cursor-glow.active { filter: blur(40px); width: 32px; height: 32px; opacity: 1; transition-delay: 0s; transition: all 1s, opacity 1.24s, width 0.6s, height 0.6s, left 0s, top 0s; }
 
-body .cursor-element .cursor-glow.active {
-    filter: blur(40px);
-    width: 32px;
-    height: 32px;
-    opacity: 1;
-    transition-delay: 0s;
-    transition: all 1s, opacity 1.24s, width 0.6s, height 0.6s, left 0s, top 0s;
-}
+body .cursor-element .cursor-glow.active+span { background: var(--color-op-white); opacity: 0.82; transform: scale(0.42) translateX(-50%) translateY(-50%); box-shadow: 0 0px 21px 4px #a7e02dc4; transition: 0.32s ease; transition-delay: 0.08s; }
 
-body .cursor-element .cursor-glow.active+span {
-    background: var(--color-op-white);
-    opacity: 0.82;
-    transform: scale(0.42) translateX(-50%) translateY(-50%);
-    box-shadow: 0 0px 21px 4px #a7e02dc4;
-    transition: 0.32s ease;
-    transition-delay: 0.08s;
-}
+/* 
+.op-bg-glow { background: linear-gradient(135deg, #19adce 80%, #00000000 100%); mix-blend-mode: screen; filter: blur(300px); }
+ */
