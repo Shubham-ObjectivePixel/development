@@ -424,7 +424,7 @@ export const sectionTitleAnimation = (target, sectionTrigger, delay = 2, scope) 
             delay: delay,
             scrollTrigger: {
                 trigger: sectionTrigger,
-                start: "top 50%",
+                start: "top 60%",
                 end: "bottom bottom",
                 scrub: 1,
                 pin: false,
@@ -435,14 +435,16 @@ export const sectionTitleAnimation = (target, sectionTrigger, delay = 2, scope) 
         const split = new SplitText(target, { type: "words" });
 
         tl.fromTo(split.words, {
-            opacity: 0.02,
-            duration: 0.9,
+            opacity: 0,
+            scale: 1.15,
+            duration: 0,
         }, {
             opacity: 1,
+            scale: 1,
             stagger: {
-                    each: 0.8,
-                    from: "start",
-                }
+                each: 0.8,
+                from: "start",
+            }
         });
 
     }, scope);
