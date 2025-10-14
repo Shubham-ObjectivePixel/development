@@ -37,7 +37,7 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) =>
                             trigger: sectionTrigger,
                             markers: false,
                             start: "center center",
-                            end: "+=80% 73%",
+                            end: "+=80% 77%",
                             pin: true,
                             pinSpacing: false,
                             pinSpacer: 20,
@@ -424,11 +424,11 @@ export const sectionTitleAnimation = (target, sectionTrigger, delay = 2, scope) 
             delay: delay,
             scrollTrigger: {
                 trigger: sectionTrigger,
-                start: "top 60%",
-                end: "bottom bottom",
+                start: "top 75%",
+                end: "center bottom",
                 scrub: 1,
                 pin: false,
-                markers: false,
+                markers: true,
             }
         });
 
@@ -436,11 +436,9 @@ export const sectionTitleAnimation = (target, sectionTrigger, delay = 2, scope) 
 
         tl.fromTo(split.words, {
             opacity: 0,
-            scale: 1.15,
             duration: 0,
         }, {
             opacity: 1,
-            scale: 1,
             stagger: {
                 each: 0.8,
                 from: "start",
