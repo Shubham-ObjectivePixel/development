@@ -428,7 +428,7 @@ export const sectionTitleAnimation = (target, sectionTrigger, delay = 2, scope) 
                 end: "center bottom",
                 scrub: 1,
                 pin: false,
-                markers: true,
+                markers: false,
             }
         });
 
