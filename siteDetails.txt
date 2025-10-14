@@ -25,7 +25,7 @@ neutral: White/Black
 rgba(0, 0, 0, 0.30)
 
 /* Typography I like on the site */
-Heading: Makizlo
+Heading: Makizlo / Anthelion / Mona Sans <-- Try this one last
 body: Manrope;
 
 /* Site Ideas */
@@ -46,6 +46,8 @@ https://markwoodland.com.au/
 https://jomor-design-2019.webflow.io/
 https://kafeaterra.gr/
 https://hen-ry.com/
+
+This one: https://framix-template.webflow.io/work/work-1
 
 
 /* Prepare Content */

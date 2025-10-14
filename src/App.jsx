@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import HomePage from './pages/Index';
 import AboutPage from './pages/About';
 import WorkPage from './pages/Work';
 import ContactPage from './pages/Contact';
 import NotFoundPage from './pages/NotFound';
-// import { HeaderProvider } from "./components/context/HeaderContext";
 
 const App = () => {
     return (

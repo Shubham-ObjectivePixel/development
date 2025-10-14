@@ -127,7 +127,7 @@ const Navigation = () => {
 	import Mousepointer from './hooks/Mousepointer';
 import SmoothScroll from './hooks/Smoothscroll'
 
-    import '@fontsource/manrope';
+    
     <Header></Header>
     <Footer></Footer>
     import Header from './components/layouts/Header'

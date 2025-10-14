@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@fontsource-variable/manrope": "^5.2.6",
+    "@fontsource-variable/mona-sans": "^5.2.8",
     "@fontsource/manrope": "^5.2.6",
     "@fontsource/source-sans-3": "^5.2.9",
     "@tailwindcss/vite": "^4.1.12",
