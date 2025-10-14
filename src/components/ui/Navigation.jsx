@@ -45,9 +45,9 @@ const Navigation = () => {
                         <div className="main-navigation h-screen w-[89%] pl-[8vw] invisible">
                             <nav className="flex flex-col h-full justify-center">
                                 <ul className="flex flex-col lg:gap-[4vw] md:gap-[7vw] gap-[10vw] justify-between">
-                                    <li className="op-nav-item"><a href="/about" className="text-stroke font-black uppercase text-whiteColor-25 hover:text-secondaryColor font-makizlo-font lg:text-[8vw] md:text-[10vw] text-[14vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">About</a></li>
-                                    <li className="op-nav-item"><a href="/work" className="text-stroke font-black uppercase text-whiteColor-25 hover:text-secondaryColor font-makizlo-font lg:text-[8vw] md:text-[10vw] text-[14vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">Work</a></li>
-                                    <li className="op-nav-item"><a href="/contact" className="text-stroke font-black uppercase text-whiteColor-25 hover:text-secondaryColor font-makizlo-font lg:text-[8vw] md:text-[10vw] text-[14vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">Contact</a></li>
+                                    <li className="op-nav-item"><a href="/about" className="text-stroke font-black uppercase text-whiteColor-25 hover:text-secondaryColor font-primaryFont lg:text-[8vw] md:text-[10vw] text-[14vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">About</a></li>
+                                    <li className="op-nav-item"><a href="/work" className="text-stroke font-black uppercase text-whiteColor-25 hover:text-secondaryColor font-primaryFont lg:text-[8vw] md:text-[10vw] text-[14vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">Work</a></li>
+                                    <li className="op-nav-item"><a href="/contact" className="text-stroke font-black uppercase text-whiteColor-25 hover:text-secondaryColor font-primaryFont lg:text-[8vw] md:text-[10vw] text-[14vw] leading-[normal] tracking-widest transition duration-700 ease-in-out">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
