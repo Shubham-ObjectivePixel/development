@@ -37,7 +37,7 @@ export const bannerHeadingEffect = (target, sectionTrigger, delay = 2, scope) =>
                             trigger: sectionTrigger,
                             markers: false,
                             start: "center center",
-                            end: "+=80% 77%",
+                            end: "+=80% 102%",
                             pin: true,
                             pinSpacing: false,
                             pinSpacer: 20,
@@ -424,8 +424,8 @@ export const sectionTitleAnimation = (target, sectionTrigger, delay = 2, scope) 
             delay: delay,
             scrollTrigger: {
                 trigger: sectionTrigger,
-                start: "top 75%",
-                end: "center bottom",
+                start: "top 70%",
+                end: "60% bottom",
                 scrub: 1,
                 pin: false,
                 markers: false,
@@ -443,6 +443,39 @@ export const sectionTitleAnimation = (target, sectionTrigger, delay = 2, scope) 
                 each: 0.8,
                 from: "start",
             }
+        });
+
+    }, scope);
+};
+
+/**
+ * Inner Page Heading Animation
+ * @param {string} target - selector of the element to animate
+ * @param {string} sectionTrigger - Section trigger
+ * @param {number} delay - animation duration
+ * @param {HTMLElement} scope - gsap.context scope element
+ */
+export const pageHeadingAnimation = (target, sectionTrigger, delay = 2, scope) => {
+    const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+            delay: delay,
+            scrollTrigger: {
+                trigger: sectionTrigger,
+                start: "top 55%",
+                end: "20% bottom",
+                scrub: 1,
+                pin: false,
+                markers: true,
+            }
+        });
+
+        tl.fromTo(target, {
+            opacity: 0,
+            x: 100,
+            duration: 0,
+        }, {
+            opacity: 1,
+            x: 0,
         });
 
     }, scope);

@@ -15,10 +15,10 @@ const CTASection = () => {
     }, []);
 
     return (
-        <section ref={el} className="op-sec-scale-zoom xl:px-24 lg:px-20 md:px-16 px-8 py-24 bg-secondaryColor relative rounded-xl m-4 scale-[1] origin-top">
+        <section ref={el} className="op-sec-scale-zoom xl:px-24 lg:px-20 md:px-16 px-8 py-26 bg-secondaryColor relative rounded-xl m-4 scale-[1] origin-top">
             <div className="flex flex-wrap items-center justify-center md:gap-16 gap-8">
-                <h2 className="section-title-animation text-primaryColor text-[6vw] text-center leading-[normal] font-medium opacity-[0.02]">No magic formula just Consistent effort.</h2>
-                <a href="" className="inline-block rounded-full px-10 py-4 transition duration-700 transition-discrete font-medium leading-none uppercase border border-solid border-primaryColor bg-primaryColor text-secondaryColor hover:bg-transparent hover:text-primaryColor opacity-[0.02]">About Me</a>
+                <h2 className="section-title-animation text-primaryColor text-[6vw] text-center leading-[normal] font-semibold">No magic formula just Consistent effort.</h2>
+                <a href="/about" className="inline-block rounded-full px-10 py-4 transition duration-700 transition-discrete font-bold leading-none uppercase border border-solid border-acentColor bg-acentColor text-primaryColor hover:border-primaryColor hover:bg-transparent hover:text-primaryColor">About Me</a>
             </div>
         </section>
     )
