@@ -465,7 +465,7 @@ export const pageHeadingAnimation = (target, sectionTrigger, delay = 2, scope) =
                 end: "20% bottom",
                 scrub: 1,
                 pin: false,
-                markers: true,
+                markers: false,
             }
         });
 

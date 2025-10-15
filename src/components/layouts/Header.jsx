@@ -12,7 +12,7 @@ const Header = () => {
     }, []);
 
     return (
-        <header className={`px-4 py-3 fixed w-full top-0 backdrop-blur-[4px] z-20 fade-down header-style`}>
+        <header id="header" className={`px-4 py-3 fixed w-full top-0 backdrop-blur-[4px] z-20 fade-down header-style`}>
             <div className="container">
                 <div className="flex flex-wrap flex-row justify-between items-center">
                     <Logo></Logo>

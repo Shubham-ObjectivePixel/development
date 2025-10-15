@@ -47,6 +47,8 @@ https://jomor-design-2019.webflow.io/
 https://kafeaterra.gr/
 https://hen-ry.com/
 
+Button Style: https://design.odoo.com/
+
 This one: https://framix-template.webflow.io/work/work-1
 
 
