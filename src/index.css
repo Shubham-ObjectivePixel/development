@@ -1,21 +1,12 @@
 @import "tailwindcss";
 
-@font-face {
-    font-family: 'Anthelion';
-    src: url('assets/fonts/Anthelion/Anthelion.eot');
-    src: url('assets/fonts/Anthelion/Anthelion.eot?#iefix') format('embedded-opentype'),
-        url('assets/fonts/Anthelion/Anthelion.woff2') format('woff2'),
-        url('assets/fonts/Anthelion/Anthelion.woff') format('woff'),
-        url('assets/fonts/Anthelion/Anthelion.ttf') format('truetype'),
-        url('assets/fonts/Anthelion/Anthelion.svg#Anthelion') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 @theme {
-    --color-primaryColor: #171717;/*rgba(24, 22, 19, 1)*/;
-    --color-secondaryColor: #f8f1e7/*rgba(244, 234, 220, 1)*/;
+    --color-primaryColor: #171717;
+    /*rgba(24, 22, 19, 1)*/
+    ;
+    --color-secondaryColor: #f8f1e7
+        /*rgba(244, 234, 220, 1)*/
+    ;
     --color-acentColor: rgba(168, 224, 45, 1);
     --color-gradientColor: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(168, 224, 45, 1) 51%);
     --color-whiteColor: rgb(255 255 255 / 100%);
@@ -27,27 +18,182 @@
 
     --font-primaryFont: "Mona Sans Variable", sans-serif;
     --font-secondaryFont: "Manrope", sans-serif;
-    
+
     --width-container: 1920px;
 }
 
-body { font-weight: 200; font-family: var(--font-secondaryFont); }  
+body {
+    font-weight: 200;
+    font-family: var(--font-secondaryFont);
+}
 
-h1, h2, h3, h4, h5, h6 {font-family: var(--font-primaryFont)}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primaryFont)
+}
 
-.container {max-width: var(--width-container)}
+.container {
+    max-width: var(--width-container)
+}
 
-body .cursor-element, body .cursor-element * { pointer-events: none; }
+body .cursor-element,
+body .cursor-element * {
+    pointer-events: none;
+}
 
-body .cursor-element { position: fixed; width: 8px; height: 8px; border-radius: 100%; z-index: 99999; }
+body .cursor-element {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    z-index: 99999;
+}
 
-body .cursor-element span { position: fixed; border: 1px solid var(--color-whiteColor-25); border-radius: 100%; background: transparent; opacity: 0.7; width: 40px; height: 40px; display: block; z-index: 20; transition: 0.62s; transform: translateX(-50%) translateY(-50%); transform-origin: top left; transition-timing-function: cubic-bezier(0.19, 0.58, 0.58, 0.93); }
+body .cursor-element span {
+    position: fixed;
+    border: 1px solid var(--color-whiteColor-25);
+    border-radius: 100%;
+    background: transparent;
+    opacity: 0.7;
+    width: 40px;
+    height: 40px;
+    display: block;
+    z-index: 20;
+    transition: 0.62s;
+    transform: translateX(-50%) translateY(-50%);
+    transform-origin: top left;
+    transition-timing-function: cubic-bezier(0.19, 0.58, 0.58, 0.93);
+}
 
-body .cursor-element .cursor-glow { position: fixed; pointer-events: none; width: 100px; height: 100px; background: var(--color-whiteColor); border-radius: 100%; z-index: 10; opacity: 0; transform: scale(1) translateX(-50%) translateY(-50%); transform-origin: top left; filter: blur(32px); transition: all 0.64s, opacity 0.6s, width 0.68s, height 0.68s, left 0s, top 0s; transition-timing-function: cubic-bezier(0.19, 0.58, 0.58, 0.93); transition-delay: 0.2s; }
+body .cursor-element .cursor-glow {
+    position: fixed;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    background: var(--color-whiteColor);
+    border-radius: 100%;
+    z-index: 10;
+    opacity: 0;
+    transform: scale(1) translateX(-50%) translateY(-50%);
+    transform-origin: top left;
+    filter: blur(32px);
+    transition: all 0.64s, opacity 0.6s, width 0.68s, height 0.68s, left 0s, top 0s;
+    transition-timing-function: cubic-bezier(0.19, 0.58, 0.58, 0.93);
+    transition-delay: 0.2s;
+}
 
-body .cursor-element .cursor-glow.active { filter: blur(40px); width: 32px; height: 32px; opacity: 1; transition-delay: 0s; transition: all 1s, opacity 1.24s, width 0.6s, height 0.6s, left 0s, top 0s; }
+body .cursor-element .cursor-glow.active {
+    filter: blur(40px);
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    transition-delay: 0s;
+    transition: all 1s, opacity 1.24s, width 0.6s, height 0.6s, left 0s, top 0s;
+}
 
-body .cursor-element .cursor-glow.active+span { background: var(--color-whiteColor); opacity: 0.82; transform: scale(0.42) translateX(-50%) translateY(-50%); box-shadow: 0 0px 21px 4px #a7e02dc4; transition: 0.32s ease; transition-delay: 0.08s; }
+body .cursor-element .cursor-glow.active+span {
+    background: var(--color-whiteColor);
+    opacity: 0.82;
+    transform: scale(0.42) translateX(-50%) translateY(-50%);
+    box-shadow: 0 0px 21px 4px #a7e02dc4;
+    transition: 0.32s ease;
+    transition-delay: 0.08s;
+}
+
+
+.project-view {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    padding: 10px 18px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100px;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99999;
+    transition: opacity 0.4s ease, transform 0.2s ease;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.project-view.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05) rotate(315deg);
+}
+
+.cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin-bottom: 90px;
+}
+
+.custom-card {
+    position: absolute;
+    top: 0px;
+}
+
+.card1 {}
+
+.card2 {
+    top: 30px;
+}
+
+.card3 {
+    top: 60px;
+}
+
+.card4 {
+    top: 90px;
+}
+
+.opacity {
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    opacity: 0.6;
+}
+
+.scale {
+    moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    width: 95%;
+}
+
+.custom-card.card-1:before {
+    content: '01';
+    color: #fff;
+    font-size: 18vw;
+    position: absolute;
+    top: 0;
+    left: -140px;
+    font-family: var(--font-primaryFont);
+    font-weight: 800;
+    opacity: 0.1;
+    line-height: 1;
+    transform: rotate(-90deg);
+}
 
 /* 
 .op-bg-glow { background: linear-gradient(135deg, #19adce 80%, #00000000 100%); mix-blend-mode: screen; filter: blur(300px); }

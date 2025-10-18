@@ -1,8 +1,9 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText, ScrollToPlugin);
 
 /**
  * Welcome Heading Animation
@@ -186,13 +187,13 @@ export const VideoPlayOnScroll = (target, delay = 1, scope) => {
 export const scrollToExplore = (target, delay = 2) => {
     const ctx = gsap.context(() => {
         const split = new SplitText(target, { type: "chars" });
-        gsap.set(split.chars, { opacity: 0.6 });
+        gsap.set(split.chars, { opacity: 0.3 });
 
         const tl = gsap.timeline({ delay: delay, repeat: -1 });
 
         tl.to(split.chars, {
             opacity: 1,
-            duration: 2,
+            duration: 1,
             ease: "back.out(2)",
             stagger: {
                 each: 0.1,
@@ -478,5 +479,99 @@ export const pageHeadingAnimation = (target, sectionTrigger, delay = 2, scope) =
             x: 0,
         });
 
+    }, scope);
+};
+
+export const projectStackAnimation = (target1, target2, target3, target4, sectionTrigger, scope) => {
+    const ctx2 = gsap.context(() => {
+        let tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: sectionTrigger,
+                pin: true,
+                pinSpacing: true,
+                markers: false,
+                start: "top-=120px top",
+                end: "+=2500",
+                scrub: 1,
+            }
+        });
+
+        tl.addLabel("target1");
+        tl.to(target1, {
+            yPercent: 0,
+            opacity: 1
+        })
+
+        tl.from(target2, {
+            yPercent: 50,
+            opacity: 0,
+        })
+        tl.addLabel("target2");
+        tl.add(() => setActiveNav(tl.scrollTrigger.direction > 0 ? 1 : 0), "-=0.15");
+        tl.to(target1, {
+            scale: 0.925,
+            yPercent: -0.75,
+            opacity: 1
+        }, "-=0.3")
+        tl.to(target2, {
+            yPercent: 0,
+            opacity: 1
+        })
+
+        tl.from(target3, {
+            yPercent: 75,
+            opacity: 0,
+        })
+        tl.addLabel("target3");
+        tl.add(() => setActiveNav(tl.scrollTrigger.direction > 0 ? 2 : 1), "-=0.15");
+        tl.to(target2, {
+            scale: 0.95,
+            yPercent: -0.5,
+            opacity: 1
+        }, "-=0.3")
+        tl.to(target3, {
+            yPercent: 0,
+            opacity: 1
+        })
+
+        tl.from(target4, {
+            yPercent: 75,
+            opacity: 0,
+        })
+        tl.addLabel("target4");
+        tl.add(() => setActiveNav(tl.scrollTrigger.direction > 0 ? 3 : 2), "-=0.15");
+        tl.to(target3, {
+            scale: 0.98,
+            yPercent: -0.4,
+            opacity: 1
+        }, "-=0.3")
+        tl.to(target4, {
+            yPercent: 0,
+            opacity: 1
+        })
+
+        tl.to(target1, {
+            scale: 0.925,
+            yPercent: -1.5,
+            opacity: 0.9
+        }, "-=0.3")
+
+        tl.to(target2, {
+            scale: 0.95,
+            yPercent: -1.125,
+            opacity: 0.9
+        }, "-=0.3")
+
+        tl.to(target3, {
+            scale: 0.98,
+            yPercent: -0.85,
+            opacity: 0.9
+        }, "-=0.3")
+
+        function labelToScroll(timeline, label) {
+            let st = timeline.scrollTrigger,
+                progress = timeline.labels[label] / timeline.duration();
+            return st.start + (st.end - st.start) * progress;
+        }
     }, scope);
 };
