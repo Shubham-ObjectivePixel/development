@@ -11,12 +11,23 @@ const HomePage = () => {
             <Header />
             <main>
                 <BannerSection />
-                <CTASection />
+                <CTASection
+                    CTAText="No magic formula just Consistent effort."
+                    CTAButtonText="About Me"
+                    CTAbuttonLink="/about"
+                    setBG="Yes"
+                    fontSize="6vw"
+                />
                 <ProjectsSection />
-
-                <div className="h-screen"></div>
-                <div className="h-screen"></div>
-                <div className="h-screen"></div>
+                <div className="h-[80vh]"></div>
+                <CTASection
+                    CTAText="Grow Online"
+                    CTAButtonText="Contact Me"
+                    CTAbuttonLink="/contact"
+                    setBG="No"
+                    fontSize="13vw"
+                />
+                <h2 className="section__title--entrance text-secondaryColor uppercase text-[15vw] font-bold text-left leading-none ">Website Matters</h2>
             </main>
             <Footer />
         </>

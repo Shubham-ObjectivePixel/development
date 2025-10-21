@@ -491,7 +491,7 @@ export const projectStackAnimation = (target1, target2, target3, target4, sectio
                 pinSpacing: true,
                 markers: false,
                 start: "top-=120px top",
-                end: "+=2500",
+                end: "+=2000",
                 scrub: 1,
             }
         });
