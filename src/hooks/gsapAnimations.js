@@ -425,7 +425,7 @@ export const sectionTitleAnimation = (target, sectionTrigger, delay = 2, scope) 
             delay: delay,
             scrollTrigger: {
                 trigger: sectionTrigger,
-                start: "top 70%",
+                start: "top 60%",
                 end: "60% bottom",
                 scrub: 1,
                 pin: false,

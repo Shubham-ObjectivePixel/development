@@ -4,6 +4,7 @@ import Footer from "../components/layouts/Footer"
 import BannerSection from "../components/ui/BannerSection";
 import ProjectsSection from "../components/ui/ProjectsSection";
 import CTASection from "../components/ui/CTASection";
+import HowCanIHelp from "../components/ui/HowCanIHelp"
 
 const HomePage = () => {
     return (
@@ -21,13 +22,13 @@ const HomePage = () => {
                 <ProjectsSection />
                 <div className="h-[80vh]"></div>
                 <CTASection
-                    CTAText="Wants to Grow Online?"
+                    CTAText="Discover What’s Possible"
                     CTAButtonText="Contact Me"
                     CTAbuttonLink="/contact"
                     setBG="No"
-                    fontSize="8vw"
+                    fontSize="10vw"
                 />
-                <h2 className="section__title--entrance text-secondaryColor uppercase text-[15vw] font-bold text-left leading-none ">Website Matters</h2>
+                <HowCanIHelp />
             </main>
             <Footer />
         </>
