@@ -1,8 +1,17 @@
+import { useEffect } from "react";
+
 import Header from "../components/layouts/Header"
 import Footer from "../components/layouts/Footer"
 
 const AboutPage = () => {
+    useEffect(() => {
+        document.title = "Objective Pixel - About";
 
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', 'Creating websites that inspire and connect. I turn your vision into a strong online presence.');
+        }
+    });
     return (
         <>
             <Header />

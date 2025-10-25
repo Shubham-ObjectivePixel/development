@@ -1,6 +1,8 @@
 import { useLayoutEffect, useRef } from "react";
 import { sectionTitleAnimation } from "../../hooks/gsapAnimations";
 
+import Button from "../ui/Button";
+
 const CTASection = ({ CTAText, CTAbuttonLink, CTAButtonText, setBG, fontSize }) => {
 
     const el = useRef();
@@ -18,7 +20,7 @@ const CTASection = ({ CTAText, CTAbuttonLink, CTAButtonText, setBG, fontSize }) 
         <section ref={el} className={`op-sec-scale-zoom px-8 ${setBG === "Yes" ? "bg-secondaryColor py-26 xl:px-24 lg:px-20 md:px-16 md:mx-20 mx-4" : ""} relative rounded-xl my-4 md:mx-4 mx-0 scale-[1] origin-top`}>
             <div className="flex flex-wrap flex-col items-center justify-center md:gap-16 gap-8">
                 <p style={{ fontSize: `${fontSize}` }} className={`font-primaryFont section-title-animation ${setBG === "Yes" ? "text-primaryColor" : "text-secondaryColor"} text-center leading-[normal] font-semibold block`}>{CTAText}</p>
-                <a href={CTAbuttonLink} className={`inline-block rounded-full px-10 py-4 transition duration-700 transition-discrete font-bold leading-none uppercase border border-solid border-acentColor bg-acentColor text-primaryColor hover:scale-[1.05] ${setBG === "Yes" ? "hover:border-primaryColor hover:bg-transparent hover:text-primaryColor" : "hover:border-secondaryColor hover:bg-transparent hover:text-secondaryColor"}`}>{CTAButtonText}</a>
+                <Button buttonLink={CTAbuttonLink} buttonText={CTAButtonText} setBG={setBG} />
             </div>
         </section>
     )

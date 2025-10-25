@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef } from "react";
 import { bannerHeadingEffect, bannerTextEffect } from "../../hooks/gsapAnimations";
-import BannerVideo from "./BannerVideo";
+import BannerVideo from "../ui/BannerVideo";
 
 const BannerSection = () => {
     const el = useRef();

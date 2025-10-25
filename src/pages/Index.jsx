@@ -1,12 +1,22 @@
+import { useEffect } from "react";
+
 import Header from "../components/layouts/Header"
 import Footer from "../components/layouts/Footer"
 
-import BannerSection from "../components/ui/BannerSection";
-import ProjectsSection from "../components/ui/ProjectsSection";
-import CTASection from "../components/ui/CTASection";
-import HowCanIHelp from "../components/ui/HowCanIHelp"
+import BannerSection from "../components/sections/BannerSection";
+import ProjectsSection from "../components/sections/ProjectsSection";
+import CTASection from "../components/sections/CTASection";
+import HowCanIHelp from "../components/sections/HowCanIHelp"
 
 const HomePage = () => {
+    useEffect(() => {
+        document.title = "Objective Pixel - Creative Web Solutions";
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', 'Creating websites that inspire and connect. I turn your vision into a strong online presence.');
+        }
+    });
     return (
         <>
             <Header />
