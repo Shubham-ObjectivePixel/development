@@ -18,10 +18,10 @@ const HowCanIHelp = () => {
     }, []);
 
     return (
-        <section ref={el} className={`bg-secondaryColor h-screen mt-10 mb-50 py-35`}>
-            <div className="w-full h-full flex flex-wrap flex-col justify-center max-w-7xl px-4 mx-auto">
-                <h2 className="section__title--entrance text-primaryColor text-[4vw] font-bold text-left leading-none ">Here's how I can help you</h2>
-                <div className="helps-lists-type mt-15">
+        <section ref={el} className={`bg-secondaryColor mt-10 md:mb-50 mb-25 md:py-35 py-25`}>
+            <div className="w-full h-full flex flex-wrap md:px-40 px-5 mx-auto">
+                <h2 className="section__title--entrance text-primaryColor md:text-[6vw] text-[10vw] font-bold text-left leading-none ">Here's how I can help you</h2>
+                <div className="helps-lists-type mt-15 w-full">
                     <div className="helps-lists--items py-10 px-4 border-t-1 border-primaryColor bg-secondaryColor">
                         <h3 className="text-primaryColor text-2xl font-medium text-left leading-none mb-2">Website design and development</h3>
                         <p className="text-primaryColor text-lg opacity-[.65]">Crafting fast, responsive, and visually engaging WordPress websites that align with your brand and business goals.</p>

@@ -472,11 +472,11 @@ export const pageHeadingAnimation = (target, sectionTrigger, delay = 2, scope) =
 
         tl.fromTo(target, {
             opacity: 0,
-            x: 100,
+            y: 100,
             duration: 0,
         }, {
             opacity: 1,
-            x: 0,
+            y: 0,
         });
 
     }, scope);

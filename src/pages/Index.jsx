@@ -27,9 +27,9 @@ const HomePage = () => {
                     CTAButtonText="Let’s Talk"
                     CTAbuttonLink="/contact"
                     setBG="No"
-                    fontSize="9vw"
+                    fontSize="8vw"
                 />
-                <div className="h-[15vh]"></div>
+                <div className="md:h-[15vh] h-[10vh]"></div>
             </main>
             <Footer />
         </>
