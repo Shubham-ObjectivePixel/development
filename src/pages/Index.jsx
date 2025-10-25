@@ -21,14 +21,15 @@ const HomePage = () => {
                 />
                 <ProjectsSection />
                 <div className="h-[80vh]"></div>
+                <HowCanIHelp />
                 <CTASection
-                    CTAText="Discover What’s Possible"
-                    CTAButtonText="Contact Me"
+                    CTAText="Let’s build something meaningful together."
+                    CTAButtonText="Let’s Talk"
                     CTAbuttonLink="/contact"
                     setBG="No"
-                    fontSize="10vw"
+                    fontSize="9vw"
                 />
-                <HowCanIHelp />
+                <div className="h-[15vh]"></div>
             </main>
             <Footer />
         </>

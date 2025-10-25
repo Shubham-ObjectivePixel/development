@@ -482,6 +482,43 @@ export const pageHeadingAnimation = (target, sectionTrigger, delay = 2, scope) =
     }, scope);
 };
 
+/**
+ * Inner Page Heading Animation
+ * @param {string} target - selector of the element to animate
+ * @param {string} sectionTrigger - Section trigger
+ * @param {number} delay - animation duration
+ * @param {HTMLElement} scope - gsap.context scope element
+ */
+export const helpsListItems = (target, sectionTrigger, delay = 2, scope) => {
+    const ctx = gsap.context(() => {
+        const tl = gsap.timeline({
+            delay: delay,
+            scrollTrigger: {
+                trigger: sectionTrigger,
+                start: "top 40%",
+                end: "bottom bottom",
+                scrub: 1,
+                pin: false,
+                markers: false,
+            }
+        });
+
+        tl.fromTo(target, {
+            opacity: 0,
+            y: -50,
+            duration: 0,
+        }, {
+            opacity: 1,
+            y: 0,
+            stagger: {
+                each: 0.6,
+                from: "start",
+            }
+        });
+
+    }, scope);
+};
+
 export const projectStackAnimation = (target1, target2, target3, target4, sectionTrigger, scope) => {
     const ctx2 = gsap.context(() => {
         let tl = gsap.timeline({
